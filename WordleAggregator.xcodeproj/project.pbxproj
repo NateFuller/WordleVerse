@@ -705,6 +705,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBAE44EA27D53AD400F60C04 /* WordleVerse.xcdatamodel */,
+			);
+			currentVersion = CBAE44EA27D53AD400F60C04 /* WordleVerse.xcdatamodel */;
+			path = WordleVerse.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CBCCA39627C94855007B2643 /* Project object */;
 }
