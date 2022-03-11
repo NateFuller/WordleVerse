@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB073BD827CBE1750016F04F /* GameRowViewModel.swift */; };
+		CB4A51CE27DAE6BE00AB5F0D /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */; };
 		CB58F48F27D589F100914CE5 /* GameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58F48E27D589F100914CE5 /* GameSelectionView.swift */; };
 		CB58F49327D5C51B00914CE5 /* ScoreSubmissionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58F49227D5C51B00914CE5 /* ScoreSubmissionScreen.swift */; };
 		CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7327C987C10080E6D0 /* GameRow.swift */; };
 		CB69FB7A27C9910A0080E6D0 /* Game+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7927C9910A0080E6D0 /* Game+CoreData.swift */; };
+		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
 		CBAE44EB27D53AD400F60C04 /* WordleVerse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */; };
 		CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44ED27D53F6900F60C04 /* DataController.swift */; };
 		CBAE44F127D5581700F60C04 /* ScoreHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */; };
@@ -46,10 +48,12 @@
 
 /* Begin PBXFileReference section */
 		CB073BD827CBE1750016F04F /* GameRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRowViewModel.swift; sourceTree = "<group>"; };
+		CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
 		CB58F48E27D589F100914CE5 /* GameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionView.swift; sourceTree = "<group>"; };
 		CB58F49227D5C51B00914CE5 /* ScoreSubmissionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSubmissionScreen.swift; sourceTree = "<group>"; };
 		CB69FB7327C987C10080E6D0 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		CB69FB7927C9910A0080E6D0 /* Game+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreData.swift"; sourceTree = "<group>"; };
+		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
 		CBAE44EA27D53AD400F60C04 /* WordleVerse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordleVerse.xcdatamodel; sourceTree = "<group>"; };
 		CBAE44ED27D53F6900F60C04 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryView.swift; sourceTree = "<group>"; };
@@ -94,10 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB4A51CA27DAE68700AB5F0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CB58F49027D5910B00914CE5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				CB69FB7327C987C10080E6D0 /* GameRow.swift */,
+				CB74180827D5D30700FC7CDD /* WordleInputField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 			children = (
 				CBCCA3A127C94855007B2643 /* WordleAggregatorApp.swift */,
 				CBAE44EC27D53F5900F60C04 /* Data */,
+				CB4A51CA27DAE68700AB5F0D /* Extensions */,
 				CB69FB7827C990FB0080E6D0 /* Models */,
 				CB69FB7227C97F510080E6D0 /* Views */,
 				CB69FB7727C98EA00080E6D0 /* View-Models */,
@@ -385,6 +399,7 @@
 				CB69FB7A27C9910A0080E6D0 /* Game+CoreData.swift in Sources */,
 				CBCCA3A227C94855007B2643 /* WordleAggregatorApp.swift in Sources */,
 				CB58F49327D5C51B00914CE5 /* ScoreSubmissionScreen.swift in Sources */,
+				CB4A51CE27DAE6BE00AB5F0D /* String+Subscript.swift in Sources */,
 				CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,7 +569,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,7 +599,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,7 +622,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FB4GZPFLL6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,7 +647,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FB4GZPFLL6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

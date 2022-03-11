@@ -20,7 +20,7 @@ struct GameSelectionView: View {
       ScrollView {
         LazyVStack(spacing: 15) {
           ForEach(games, id: \.self) { game in
-            NavigationLink(destination: ScoreSubmissionView()) {
+            NavigationLink(destination: ScoreSubmissionView(gameWordLength: Int(game.wordLength))) {
               GameRow(viewModel: GameRowViewModel(game: game))
             }
           }

@@ -19,6 +19,7 @@ struct Colors {
     struct Button {
       static let primary = Color("btn.primary")
       static let secondary = Color("btn.secondary")
+      static let tertiary = Color("btn.tertiary")
     }
 
     struct Gradient {

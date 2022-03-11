@@ -28,6 +28,7 @@ struct WordleInputField: View {
     TextField("", text: $inputText)
       .keyboardType(.alphabet)
       .disableAutocorrection(true)
+      .accentColor(.clear)
       .tint(.clear)
       .foregroundColor(.clear)
       .multilineTextAlignment(.center)
