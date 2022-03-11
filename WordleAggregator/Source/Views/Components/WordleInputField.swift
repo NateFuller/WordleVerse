@@ -8,34 +8,46 @@
 import SwiftUI
 
 struct WordleInputField: View {
-  var length: Int = 5
-  var filledTemporary: Bool = false
-
-  @State var inputText: String = ""
+  var length: Int
+  @Binding var inputText: String
+  @FocusState private var isFocused: Bool
 
   var body: some View {
-    VStack() {
-      ZStack {
-        foregroundText
-        squares
-      }
+    ZStack {
+      functionalButHiddenTextField
+      squares.gesture(
+        TapGesture()
+          .onEnded({ _ in
+            isFocused = true
+          })
+      )
     }
   }
 
-
-  private var foregroundText: some View {
+  private var functionalButHiddenTextField: some View {
     TextField("", text: $inputText)
+      .keyboardType(.alphabet)
+      .disableAutocorrection(true)
+      .tint(.clear)
+      .foregroundColor(.clear)
+      .multilineTextAlignment(.center)
+      .focused($isFocused)
   }
 
   private var squares: some View {
-    HStack {
-      Spacer()
+    HStack() {
       ForEach(0..<length) { index in
-        Rectangle()
-          .fill(filledTemporary ? Colors.Background.Input.filled : Colors.Background.Input.empty)
-          .border(filledTemporary ? Colors.Background.Input.filled : Colors.Input.borderEmpty, width: 2)
-          .frame(width: 62, height: 62)
-        Spacer()
+        ZStack {
+          Rectangle()
+            .fill(!inputText[index].isEmpty ? Colors.Background.Input.filled : Colors.Background.Input.empty)
+            .border(!inputText[index].isEmpty ? Colors.Background.Input.filled : Colors.Input.borderEmpty, width: 2)
+          Text(inputText[index].uppercased())
+            .font(.system(size: 500))
+            .foregroundColor(.white)
+            .fontWeight(.bold)
+            .minimumScaleFactor(0.01)
+            .padding(80 / CGFloat(length))
+        }.aspectRatio(1, contentMode: .fit)
       }
     }
   }
@@ -43,7 +55,9 @@ struct WordleInputField: View {
 
 struct WordleInputField_Previews: PreviewProvider {
   static var previews: some View {
-    WordleInputField()
-      .preferredColorScheme(.dark)
+    VStack {
+      WordleInputField(length: 5, inputText: .constant("weir"))
+    }
+
   }
 }
