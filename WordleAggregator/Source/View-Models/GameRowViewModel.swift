@@ -9,6 +9,11 @@ import Foundation
 import SwiftUI
 
 struct GameRowViewModel {
-  var game: Game
-  var backgroundImageName: String?
+  var title: String!
+  var url: URL!
+
+  init(game: Game) {
+    title = game.title
+    url = game.url
+  }
 }
