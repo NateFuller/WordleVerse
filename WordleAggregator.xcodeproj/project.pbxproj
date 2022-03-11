@@ -21,7 +21,6 @@
 		CBD2FE6127D2C04100631C26 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2FE6027D2C04100631C26 /* PrimaryButton.swift */; };
 		CBD2FE6327D2E1D300631C26 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2FE6227D2E1D300631C26 /* SecondaryButton.swift */; };
 		CBEDBA4B27D332450007C16D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEDBA4A27D332450007C16D /* Colors.xcassets */; };
-		CBEDBA4E27D33D6D0007C16D /* DiagonalGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDBA4D27D33D6D0007C16D /* DiagonalGradient.swift */; };
 		CBEDBA5227D343430007C16D /* FlexibleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDBA5127D343430007C16D /* FlexibleButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		CBD2FE6027D2C04100631C26 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		CBD2FE6227D2E1D300631C26 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		CBEDBA4A27D332450007C16D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		CBEDBA4D27D33D6D0007C16D /* DiagonalGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalGradient.swift; sourceTree = "<group>"; };
 		CBEDBA5127D343430007C16D /* FlexibleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleButton.swift; sourceTree = "<group>"; };
 		CBEDBA5327D356240007C16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB58F49127D5911A00914CE5 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CBD2FE5E27D2B59200631C26 /* Color+Saved.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		CB69FB7127C94A120080E6D0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +112,7 @@
 				CBEDBA4F27D343300007C16D /* Buttons */,
 				CBEDBA4C27D33C3A0007C16D /* Modifiers */,
 				CB69FB7327C987C10080E6D0 /* GameRowView.swift */,
-				CBD2FE5E27D2B59200631C26 /* Color+Saved.swift */,
-				CBEDBA4D27D33D6D0007C16D /* DiagonalGradient.swift */,
+				CB58F49127D5911A00914CE5 /* Colors */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,7 +354,6 @@
 				CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */,
 				CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */,
 				CBD2FE6327D2E1D300631C26 /* SecondaryButton.swift in Sources */,
-				CBEDBA4E27D33D6D0007C16D /* DiagonalGradient.swift in Sources */,
 				CBD2FE6127D2C04100631C26 /* PrimaryButton.swift in Sources */,
 				CBCCA3A227C94855007B2643 /* WordleAggregatorApp.swift in Sources */,
 				CB69FB7427C987C10080E6D0 /* GameRowView.swift in Sources */,
