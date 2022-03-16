@@ -15,7 +15,7 @@
 		CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7327C987C10080E6D0 /* GameRow.swift */; };
 		CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7927C9910A0080E6D0 /* Game.swift */; };
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
-		CB89B5A827E03AE700FB4650 /* KeyboardDismissListenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89B5A727E03AE700FB4650 /* KeyboardDismissListenerView.swift */; };
+		CB89B5A827E03AE700FB4650 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89B5A727E03AE700FB4650 /* Background.swift */; };
 		CBAE44EB27D53AD400F60C04 /* WordleVerse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */; };
 		CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44ED27D53F6900F60C04 /* DataController.swift */; };
 		CBAE44F127D5581700F60C04 /* ScoreHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */; };
@@ -57,6 +57,7 @@
 		CB69FB7327C987C10080E6D0 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		CB69FB7927C9910A0080E6D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
+		CB89B5A727E03AE700FB4650 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		CBAE44EA27D53AD400F60C04 /* WordleVerse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordleVerse.xcdatamodel; sourceTree = "<group>"; };
 		CBAE44ED27D53F6900F60C04 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryView.swift; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 				CB58F49127D5911A00914CE5 /* Colors */,
 				CB58F49027D5910B00914CE5 /* Components */,
 				CBAE44EF27D5580000F60C04 /* Screens */,
+				CB89B5A727E03AE700FB4650 /* Background.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -421,6 +423,7 @@
 				CBCCA3A227C94855007B2643 /* WordleAggregatorApp.swift in Sources */,
 				CB58F49327D5C51B00914CE5 /* ScoreSubmissionScreen.swift in Sources */,
 				CB4A51CE27DAE6BE00AB5F0D /* String+Subscript.swift in Sources */,
+				CB89B5A827E03AE700FB4650 /* Background.swift in Sources */,
 				CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
