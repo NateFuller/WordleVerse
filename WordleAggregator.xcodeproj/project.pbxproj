@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB073BD827CBE1750016F04F /* GameRowViewModel.swift */; };
 		CB18720627E1820000BC81C4 /* TextFieldLimitModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */; };
+		CB18720927E199E600BC81C4 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18720827E199E600BC81C4 /* Score.swift */; };
 		CB4A51CE27DAE6BE00AB5F0D /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */; };
 		CB58F48F27D589F100914CE5 /* GameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58F48E27D589F100914CE5 /* GameSelectionView.swift */; };
 		CB58F49327D5C51B00914CE5 /* ScoreSubmissionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58F49227D5C51B00914CE5 /* ScoreSubmissionScreen.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		CB073BD827CBE1750016F04F /* GameRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRowViewModel.swift; sourceTree = "<group>"; };
 		CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitModifier.swift; sourceTree = "<group>"; };
+		CB18720827E199E600BC81C4 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
 		CB58F48E27D589F100914CE5 /* GameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionView.swift; sourceTree = "<group>"; };
 		CB58F49227D5C51B00914CE5 /* ScoreSubmissionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSubmissionScreen.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CB69FB7927C9910A0080E6D0 /* Game.swift */,
+				CB18720827E199E600BC81C4 /* Score.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB18720927E199E600BC81C4 /* Score.swift in Sources */,
 				CBEDBA5227D343430007C16D /* FlexibleButton.swift in Sources */,
 				CB18720627E1820000BC81C4 /* TextFieldLimitModifier.swift in Sources */,
 				CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */,
