@@ -16,7 +16,6 @@
 		CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7927C9910A0080E6D0 /* Game.swift */; };
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
 		CB89B5A827E03AE700FB4650 /* KeyboardDismissListenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89B5A727E03AE700FB4650 /* KeyboardDismissListenerView.swift */; };
-		CB8A997027DD1158001004C8 /* default_games.json in Resources */ = {isa = PBXBuildFile; fileRef = CB8A996F27DD1158001004C8 /* default_games.json */; };
 		CBAE44EB27D53AD400F60C04 /* WordleVerse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */; };
 		CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44ED27D53F6900F60C04 /* DataController.swift */; };
 		CBAE44F127D5581700F60C04 /* ScoreHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */; };
@@ -57,7 +56,6 @@
 		CB69FB7327C987C10080E6D0 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		CB69FB7927C9910A0080E6D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
-		CB8A996F27DD1158001004C8 /* default_games.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = default_games.json; sourceTree = "<group>"; };
 		CBAE44EA27D53AD400F60C04 /* WordleVerse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordleVerse.xcdatamodel; sourceTree = "<group>"; };
 		CBAE44ED27D53F6900F60C04 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryView.swift; sourceTree = "<group>"; };
@@ -102,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB18720727E1905800BC81C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBCCA3A527C94856007B2643 /* Assets.xcassets */,
+				CBEDBA4A27D332450007C16D /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CB4A51CA27DAE68700AB5F0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,14 +174,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		CB8A996E27DD1126001004C8 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				CB8A996F27DD1158001004C8 /* default_games.json */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
 		CBAE44EC27D53F5900F60C04 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,11 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				CBEDBA5327D356240007C16D /* Info.plist */,
-				CB69FB7127C94A120080E6D0 /* Source */,
-				CBCCA3A527C94856007B2643 /* Assets.xcassets */,
-				CBEDBA4A27D332450007C16D /* Colors.xcassets */,
 				CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */,
-				CB8A996E27DD1126001004C8 /* JSON */,
+				CB69FB7127C94A120080E6D0 /* Source */,
+				CB18720727E1905800BC81C4 /* Resources */,
 				CBCCA3A727C94856007B2643 /* Preview Content */,
 			);
 			path = WordleAggregator;
@@ -376,7 +373,6 @@
 				CBEDBA4B27D332450007C16D /* Colors.xcassets in Resources */,
 				CBCCA3A927C94856007B2643 /* Preview Assets.xcassets in Resources */,
 				CBCCA3A627C94856007B2643 /* Assets.xcassets in Resources */,
-				CB8A997027DD1158001004C8 /* default_games.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
