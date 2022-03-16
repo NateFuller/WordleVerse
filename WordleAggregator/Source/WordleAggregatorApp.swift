@@ -10,10 +10,6 @@ import SwiftUI
 
 @main
 struct WordleAggregatorApp: App {
-  init() {
-    Game.addDefaultGames()
-  }
-
   var body: some Scene {
     WindowGroup {
       HomeScreenView()

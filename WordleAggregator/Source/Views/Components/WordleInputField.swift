@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct WordleInputField: View {
+
+  // MARK: - Public Properties
+
   var length: Int
   @Binding var inputText: String
+
+  // MARK: - Private Properties
+
   @FocusState private var isFocused: Bool
+
+  private var indexOfFocusedCharacter: Int { max(min(inputText.length, length - 1), 0) }
+
+  init(length: Int, inputText: Binding<String>) {
+    self.length = length
+    self._inputText = inputText
+    isFocused = false
+  }
 
   var body: some View {
     ZStack {
@@ -25,7 +39,8 @@ struct WordleInputField: View {
   }
 
   private var functionalButHiddenTextField: some View {
-    TextField("", text: $inputText)
+    TextField(inputText, text: $inputText)
+      .limitInputLength(value: $inputText, length: length)
       .keyboardType(.alphabet)
       .disableAutocorrection(true)
       .accentColor(.clear)
@@ -33,6 +48,7 @@ struct WordleInputField: View {
       .foregroundColor(.clear)
       .multilineTextAlignment(.center)
       .focused($isFocused)
+      .submitLabel(.done)
   }
 
   private var squares: some View {
@@ -48,7 +64,9 @@ struct WordleInputField: View {
             .fontWeight(.bold)
             .minimumScaleFactor(0.01)
             .padding(80 / CGFloat(length))
-        }.aspectRatio(1, contentMode: .fit)
+        }
+        .aspectRatio(1, contentMode: .fit)
+        .scaleEffect(isFocused && index == indexOfFocusedCharacter ? 1.05 : 1)
       }
     }
   }
@@ -59,6 +77,5 @@ struct WordleInputField_Previews: PreviewProvider {
     VStack {
       WordleInputField(length: 5, inputText: .constant("weir"))
     }
-
   }
 }

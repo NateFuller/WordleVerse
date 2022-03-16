@@ -50,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		CB073BD827CBE1750016F04F /* GameRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRowViewModel.swift; sourceTree = "<group>"; };
+		CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitModifier.swift; sourceTree = "<group>"; };
 		CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
 		CB58F48E27D589F100914CE5 /* GameSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionView.swift; sourceTree = "<group>"; };
 		CB58F49227D5C51B00914CE5 /* ScoreSubmissionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSubmissionScreen.swift; sourceTree = "<group>"; };
@@ -100,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB18720427E181EE00BC81C4 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		CB18720727E1905800BC81C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +159,7 @@
 		CB69FB7227C97F510080E6D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB18720427E181EE00BC81C4 /* Modifiers */,
 				CBEDBA4F27D343300007C16D /* Buttons */,
 				CB58F49127D5911A00914CE5 /* Colors */,
 				CB58F49027D5910B00914CE5 /* Components */,
@@ -398,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEDBA5227D343430007C16D /* FlexibleButton.swift in Sources */,
+				CB18720627E1820000BC81C4 /* TextFieldLimitModifier.swift in Sources */,
 				CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */,
 				CBAE44EB27D53AD400F60C04 /* WordleVerse.xcdatamodeld in Sources */,
 				CB58F48F27D589F100914CE5 /* GameSelectionView.swift in Sources */,
