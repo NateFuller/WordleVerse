@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct GameSelectionView: View {
-  @FetchRequest(
-    entity: Game.entity(),
-    sortDescriptors: []
-  ) var games: FetchedResults<Game>
-
+  let games = Game.Defaults.all
   var body: some View {
     VStack(alignment: .leading) {
       Text("which game would you like to report results for?")
@@ -20,7 +16,7 @@ struct GameSelectionView: View {
       ScrollView {
         LazyVStack(spacing: 15) {
           ForEach(games, id: \.self) { game in
-            NavigationLink(destination: ScoreSubmissionView(gameWordLength: Int(game.wordLength))) {
+            NavigationLink(destination: ScoreSubmissionView(game: game)) {
               GameRow(viewModel: GameRowViewModel(game: game))
             }
           }

@@ -14,6 +14,6 @@ struct GameRowViewModel {
 
   init(game: Game) {
     title = game.title
-    url = game.url
+    url = URL(string: game.url)
   }
 }

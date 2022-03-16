@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct HomeScreenView: View {
-
-  @FetchRequest(
-    entity: Game.entity(),
-    sortDescriptors: []
-  ) var games: FetchedResults<Game>
+  let games = Game.Defaults.all
 
   var body: some View {
     NavigationView {

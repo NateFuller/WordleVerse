@@ -34,11 +34,7 @@ struct GameRow: View {
 
 struct GameRowView_Previews: PreviewProvider {
   static var previews: some View {
-    let testGame = Game(context: CoreDataStack.context)
-    testGame.title = Game.wordle.title
-    testGame.url = URL(string: Game.wordle.url)!
-    testGame.wordLength = Game.wordle.wordLength
-    testGame.maxGuesses = Game.wordle.maxGuesses
+    let testGame = Game.Defaults.wordle
 
     return GameRow(viewModel: GameRowViewModel(game: testGame))
       .previewLayout(.fixed(width: 358, height: 93))
