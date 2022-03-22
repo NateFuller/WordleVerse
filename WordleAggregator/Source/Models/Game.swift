@@ -32,6 +32,9 @@ struct Game: Codable, Hashable {
    same in length.
    */
   var answerLength: Int
+
+  var resetHour: Int
+  var resetMinute: Int
 }
 
 extension Game {
@@ -42,12 +45,16 @@ extension Game {
                              maxGuesses: 6,
                              url: "https://www.nytimes.com/games/wordle/index.html",
                              numberOfAnswers: 1,
-                             answerLength: 5)
+                             answerLength: 5,
+                             resetHour: 0,
+                             resetMinute: 0)
     static let wordle2 = Game(title: "Wordle2",
                               enabled: true,
                               maxGuesses: 6,
                               url: "https://www.wordle2.in/",
                               numberOfAnswers: 1,
-                              answerLength: 6)
+                              answerLength: 6,
+                              resetHour: 0,
+                              resetMinute: 0)
   }
 }
