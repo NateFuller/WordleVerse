@@ -22,11 +22,16 @@ struct PasteResultsView: View {
     VStack {
       WordleResultInputField(userInput: $inputText)
         .frame(height: 180)
-      NavigationLink(destination: ScoreSubmissionView(game: Game.Defaults.wordle,
-                                                      parseResult: currentParseResult),
-                     isActive: $validResultParsed) {
+      NavigationLink(
+        destination: ScoreSubmissionView(game: Game.Defaults.wordle,
+                                         parseResult: currentParseResult),
+        isActive: $validResultParsed
+      ) {
         EmptyView()
       }
+      .isDetailLink(false)
+
+
       Button(action: {
         do {
           currentParseResult = try WordleParser.parse(resultText: inputText)
@@ -43,14 +48,11 @@ struct PasteResultsView: View {
           .cornerRadius(8)
       }
       .disabled(inputText.isEmpty)
-      .alert(isPresented: $isErrorState) {
-        Alert(title: Text("Awww dangit 😞"),
-              message: Text(errorMessage!),
-              dismissButton: .cancel(Text("Okay!"), action: {
-
-        }))
-
-      }
+      .alert(Text("Awww dangit 😞"), isPresented: $isErrorState, actions: {
+        Button("Okay!", role: .cancel, action: {})
+      }, message: {
+        Text(errorMessage ?? "")
+      })
       Spacer()
     }
     .navigationTitle("Submit your score 📋")

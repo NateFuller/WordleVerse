@@ -24,16 +24,11 @@ struct CoreDataStack {
     return container
   }()
 
-  static func saveContext() {
+  static func saveContext() throws {
     let context = CoreDataStack.persistentContainer.viewContext
 
     if context.hasChanges {
-      do {
-        try context.save()
-      } catch {
-        let nserror = error as NSError
-        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-      }
+      try context.save()
     }
   }
 }

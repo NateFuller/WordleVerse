@@ -21,6 +21,7 @@
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
 		CB7733B127F8B93500DB9D9F /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = CB7733B027F8B93500DB9D9F /* en.xcloc */; };
 		CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B327F8C0C000DB9D9F /* TestError.swift */; };
+		CB7733B727F8F3B800DB9D9F /* EnvironmentValues+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */; };
 		CB7733B927F900BB00DB9D9F /* HomeScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */; };
 		CB7733BB27F900F100DB9D9F /* View+HomeScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */; };
 		CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */; };
@@ -77,6 +78,7 @@
 		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
 		CB7733B027F8B93500DB9D9F /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		CB7733B327F8C0C000DB9D9F /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Routing.swift"; sourceTree = "<group>"; };
 		CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenRow.swift; sourceTree = "<group>"; };
 		CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HomeScreenRow.swift"; sourceTree = "<group>"; };
 		CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadowModifier.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				CBED677627F6C0DE00D106C0 /* String+Optional.swift */,
 				CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */,
 				CB4A3B4327E980A800DB32A4 /* String+WordleParserInput.swift */,
+				CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				CBCCA3A227C94855007B2643 /* WordleAggregatorApp.swift in Sources */,
 				CB58F49327D5C51B00914CE5 /* ScoreSubmissionView.swift in Sources */,
 				CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */,
+				CB7733B727F8F3B800DB9D9F /* EnvironmentValues+Routing.swift in Sources */,
 				CB4A51CE27DAE6BE00AB5F0D /* String+Subscript.swift in Sources */,
 				CB89B5A827E03AE700FB4650 /* Background.swift in Sources */,
 				CB78262727F6D9D300D114D8 /* String+WordleParserInput.swift in Sources */,

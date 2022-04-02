@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+  @State var isPresented: Bool = false
   let games = Game.Defaults.all
 
   var body: some View {
@@ -24,12 +25,22 @@ struct HomeScreenView: View {
                   GameRow(viewModel: viewModel)
                 }
               }
-              NavigationLink(destination: PasteResultsView()) {
+
+              // Submit Button
+              NavigationLink(
+                destination: PasteResultsView(),
+                isActive: $isPresented
+              ) {
                 Text("Submit Results")
-              }.buttonStyle(FlexibleButton(color: Colors.Background.Button.primary))
+              }
+              .isDetailLink(false)
+              .buttonStyle(FlexibleButton(color: Colors.Background.Button.primary))
+
+              // History Button
               NavigationLink(destination: ScoreHistoryView()) {
                 Text("History")
-              }.buttonStyle(FlexibleButton(color: Colors.Background.Button.secondary))
+              }
+              .buttonStyle(FlexibleButton(color: Colors.Background.Button.secondary))
             }
           }
           Spacer()
@@ -38,6 +49,7 @@ struct HomeScreenView: View {
         .padding(16)
       }
     }
+    .environment(\.rootPresentationMode, self.$isPresented)
   }
 }
 
