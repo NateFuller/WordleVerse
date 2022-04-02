@@ -8,6 +8,15 @@
 import Foundation
 
 extension String {
+  static let hardMode =
+  """
+  Wordle 275 3/6*
+
+  ⬛🟨⬛⬛⬛
+  ⬛🟩⬛🟨🟨
+  🟩🟩🟩🟩🟩
+  """
+  
   static let winInThree =
   """
   Wordle 275 3/6

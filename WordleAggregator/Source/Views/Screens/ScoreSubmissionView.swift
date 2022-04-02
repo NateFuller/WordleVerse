@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScoreSubmissionView: View {
   var game: Game
+  var parseResult: ParseResult?
 
   @State private var answerInput: String = ""
   @State private var isAnswerInfoAlertVisible: Bool = false
@@ -17,8 +18,13 @@ struct ScoreSubmissionView: View {
   private var isInputFilled: Bool { answerInput.length == game.answerLength }
   private var sliderColor: Color
 
-  init(game: Game) {
+  init(game: Game, parseResult: ParseResult?) {
     self.game = game
+    if let parseResult = parseResult {
+      self.parseResult = parseResult
+      self.numGuesses = Double(parseResult.numGuesses)
+    }
+
     sliderColor = Colors.Background.Button.primary
   }
 
@@ -54,7 +60,7 @@ struct ScoreSubmissionView: View {
         Text(isInputFilled ? "Submit" : "I failed this time 😭")
           .foregroundColor(.white)
           .font(.body).fontWeight(.semibold)
-          .frame(width: 191, height: 50)
+          .padding()
           .background(isInputFilled ? Colors.Background.Button.primary : Colors.Background.Button.tertiary)
           .cornerRadius(8)
       }
@@ -63,15 +69,11 @@ struct ScoreSubmissionView: View {
     .navigationTitle("today's \(game.title)")
     .padding(16)
   }
-
-  private func endEditing() {
-    UIApplication.shared.endEditing()
-  }
 }
 
 struct ScoreSubmissionView_Previews: PreviewProvider {
   static var previews: some View {
-    ScoreSubmissionView(game: Game.Defaults.wordle2)
+    ScoreSubmissionView(game: Game.Defaults.wordle2, parseResult: ParseResult.fixture)
       .preferredColorScheme(.dark)
   }
 }

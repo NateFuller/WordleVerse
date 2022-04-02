@@ -18,10 +18,26 @@ class WordleParserTests: XCTestCase {
     try super.tearDownWithError()
   }
 
-  func testParseValidStringDoesNotThrow() {
+  func testParseValidStringShouldNotThrow() {
     let resultText = String.winInThree
 
     XCTAssertNoThrow(try WordleParser.parse(resultText: resultText))
+  }
+
+  func testParseHardMode() {
+    let resultText = String.hardMode
+
+    do {
+      let result = try WordleParser.parse(resultText: resultText)
+      XCTAssertEqual(result.gameTitle, "Wordle")
+      XCTAssertEqual(result.gameMemo, "275")
+      XCTAssertEqual(result.numGuesses, 3)
+      XCTAssertEqual(result.maxGuesses, 6)
+      XCTAssertEqual(result.guessSummary.count, 3)
+      XCTAssertTrue(result.isHardMode)
+    } catch {
+      XCTFail("Failed to parse")
+    }
   }
 
   func testParseResultValues() {
@@ -34,6 +50,7 @@ class WordleParserTests: XCTestCase {
       XCTAssertEqual(result.numGuesses, 3)
       XCTAssertEqual(result.maxGuesses, 6)
       XCTAssertEqual(result.guessSummary.count, 3)
+      XCTAssertFalse(result.isHardMode)
     } catch {
       XCTFail("Failed to parse \(resultText)")
     }
@@ -45,19 +62,21 @@ class WordleParserTests: XCTestCase {
     do {
       let guessSummary = try WordleParser.parse(resultText: resultText).guessSummary
 
-      XCTAssertEqual(guessSummary[0], "BYBBB")
-      XCTAssertEqual(guessSummary[1], "BGBYY")
+      XCTAssertEqual(guessSummary[0], "MYMMM")
+      XCTAssertEqual(guessSummary[1], "MGMYY")
       XCTAssertEqual(guessSummary[2], "GGGGG")
     } catch { XCTFail("Failed to parse \(resultText)") }
   }
 
   func testConvertEmojiWhenUsingValidEmoji() {
-    XCTAssertEqual(try WordleParser.convertEmoji("⬛"), "B")
+    XCTAssertEqual(try WordleParser.convertEmoji("⬛"), "M")
+    XCTAssertEqual(try WordleParser.convertEmoji("⬜"), "M")
     XCTAssertEqual(try WordleParser.convertEmoji("🟨"), "Y")
     XCTAssertEqual(try WordleParser.convertEmoji("🟩"), "G")
 
-    XCTAssertEqual(try WordleParser.convertEmoji("⬛🟨⬛⬛⬛"), "BYBBB")
-    XCTAssertEqual(try WordleParser.convertEmoji("⬛🟩⬛🟨🟨"), "BGBYY")
+    XCTAssertEqual(try WordleParser.convertEmoji("⬛🟨⬛⬛⬛"), "MYMMM")
+    XCTAssertEqual(try WordleParser.convertEmoji("⬜🟨⬜⬜⬜"), "MYMMM")
+    XCTAssertEqual(try WordleParser.convertEmoji("⬛🟩⬜🟨🟨"), "MGMYY")
     XCTAssertEqual(try WordleParser.convertEmoji("🟩🟩🟩🟩🟩"), "GGGGG")
   }
 

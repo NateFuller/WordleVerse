@@ -1,0 +1,47 @@
+//
+//  WordleResultInputField.swift
+//  WordleAggregator
+//
+//  Created by Nathan Fuller on 3/22/22.
+//
+
+import SwiftUI
+
+struct WordleResultInputField: View {
+  @Binding var userInput: String
+
+  init(userInput: Binding<String>) {
+    self._userInput = userInput
+
+    /* Override TextEditor background to allow for setting a custom background in SwiftUI */
+    UITextView.appearance().backgroundColor = .clear
+  }
+
+  var body: some View {
+    ZStack(alignment: .leading) {
+      if (userInput.isEmpty) {
+        VStack {
+          Text("Paste your results here")
+            .padding()
+          Spacer()
+        }
+      }
+      TextEditor(text: $userInput)
+        .padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 0))
+        .background(Color(.secondarySystemGroupedBackground))
+        .opacity(userInput.isEmpty ? 0.7 : 1)
+    }
+    .background(Colors.Background.primary)
+    .cornerRadius(15)
+    .modifier(InnerShadowModifier(radius: 15))
+    .padding()
+
+  }
+}
+
+struct WordleResultInputField_Previews: PreviewProvider {
+  static var previews: some View {
+    WordleResultInputField(userInput: .constant(""))
+      .preferredColorScheme(.dark)
+  }
+}

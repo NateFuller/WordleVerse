@@ -13,6 +13,16 @@ enum WordleParseError: Error {
   case emojiSummaryNotValid
 }
 
+extension WordleParseError : LocalizedError {
+  public var errorDescription: String? {
+    switch self {
+    case .inputTextNotValid: return "Something about your results doesn't look right!"
+    case .scoreNotValid: return "Your score (e.g. '3/6') doesn't look right!"
+    case .emojiSummaryNotValid: return "The emoji summary of your guesses doesn't look right!"
+    }
+  }
+}
+
 /// A utility class for parsing a user's pasted results from Wordle
 class WordleParser {
 
@@ -35,22 +45,35 @@ class WordleParser {
    */
   static func parse(resultText: String) throws -> ParseResult {
     let parts = resultText.components(separatedBy: .whitespacesAndNewlines).compactMap { $0.isEmpty ? nil : $0 }
-    guard parts.count > 3 else { throw WordleParseError.inputTextNotValid }
+    guard parts.count >= 4 else { throw WordleParseError.inputTextNotValid }
 
-    let scoreParts = parts[2].split(separator: "/").compactMap { Int($0) }
-    guard scoreParts.count == 2 else { throw WordleParseError.inputTextNotValid }
-    guard scoreParts[0] <= scoreParts[1] else { throw WordleParseError.scoreNotValid }
+    var isHardMode = false
+    var scoreString = parts[2]
+    if scoreString.contains("*") { // hard mode
+      isHardMode = true
+      scoreString = scoreString.substring(toIndex: scoreString.length - 1)
+    }
+
+    let scoreParts = scoreString.split(separator: "/").compactMap { Int($0) }
+    guard 2 >= scoreParts.count && scoreParts.count <= 3 else { throw WordleParseError.inputTextNotValid }
 
     let numGuesses = scoreParts[0]
+    let maxGuesses = scoreParts[1]
+    guard numGuesses > 0 && numGuesses <= maxGuesses else { throw WordleParseError.scoreNotValid }
 
     let firstGuessIndex = 3
     var guessSummary: [String] = []
     for index in firstGuessIndex..<(firstGuessIndex + numGuesses) {
+      guard parts[index].length == Game.Defaults.wordle.answerLength else {
+        throw WordleParseError.emojiSummaryNotValid
+      }
+
       guessSummary.append(try convertEmoji(parts[index]))
     }
 
     return ParseResult(gameTitle: parts[0],
                        gameMemo: parts[1],
+                       isHardMode: isHardMode,
                        numGuesses: numGuesses,
                        maxGuesses: scoreParts[1],
                        guessSummary: guessSummary)
@@ -60,8 +83,8 @@ class WordleParser {
     var converted = ""
     for i in 0..<emojiText.length {
       switch emojiText[i] {
-      case "⬛":
-        converted.append(contentsOf: "B")
+      case "⬛", "⬜":
+        converted.append(contentsOf: "M")
       case "🟨":
         converted.append(contentsOf: "Y")
       case "🟩":
@@ -73,12 +96,4 @@ class WordleParser {
 
     return converted
   }
-}
-
-struct ParseResult {
-  var gameTitle: String
-  var gameMemo: String
-  var numGuesses: Int
-  var maxGuesses: Int
-  var guessSummary: [String]
 }

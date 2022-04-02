@@ -27,7 +27,7 @@ struct GameRow: View {
         .resizable()
         .aspectRatio(contentMode: .fill)
     )
-    .background(Colors.Background.primary)
+    .background(Colors.Background.secondary)
     .cornerRadius(8)
   }
 }
