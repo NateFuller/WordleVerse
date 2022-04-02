@@ -68,13 +68,13 @@ class WordleParser {
     }
 
     let firstGuessIndex = 3
-    var guessSummary: [String] = []
+    var guessSummary: String = ""
     for index in firstGuessIndex..<(firstGuessIndex + numGuesses) {
       guard parts[index].length == Game.Defaults.wordle.answerLength else {
         throw WordleParseError.emojiSummaryNotValid
       }
 
-      guessSummary.append(try convertEmoji(parts[index]))
+      guessSummary.append("\(try convertEmoji(parts[index]))\n")
     }
 
     return ParseResult(gameTitle: parts[0],
@@ -82,7 +82,7 @@ class WordleParser {
                        isHardMode: isHardMode,
                        numGuesses: numGuesses,
                        maxGuesses: scoreParts[1],
-                       guessSummary: guessSummary)
+                       guessSummary: guessSummary.trimmingCharacters(in: .newlines))
   }
 
   static func convertEmoji(_ emojiText: String) throws -> String {

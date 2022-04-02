@@ -33,7 +33,6 @@ class WordleParserTests: XCTestCase {
       XCTAssertEqual(result.gameMemo, "275")
       XCTAssertEqual(result.numGuesses, 3)
       XCTAssertEqual(result.maxGuesses, 6)
-      XCTAssertEqual(result.guessSummary.count, 3)
       XCTAssertTrue(result.isHardMode)
     } catch {
       XCTFail("Failed to parse")
@@ -49,7 +48,6 @@ class WordleParserTests: XCTestCase {
       XCTAssertEqual(result.gameMemo, "275")
       XCTAssertEqual(result.numGuesses, 3)
       XCTAssertEqual(result.maxGuesses, 6)
-      XCTAssertEqual(result.guessSummary.count, 3)
       XCTAssertFalse(result.isHardMode)
     } catch {
       XCTFail("Failed to parse \(resultText)")
@@ -62,9 +60,7 @@ class WordleParserTests: XCTestCase {
     do {
       let guessSummary = try WordleParser.parse(resultText: resultText).guessSummary
 
-      XCTAssertEqual(guessSummary[0], "MYMMM")
-      XCTAssertEqual(guessSummary[1], "MGMYY")
-      XCTAssertEqual(guessSummary[2], "GGGGG")
+      XCTAssertEqual(guessSummary, "MYMMM\nMGMYY\nGGGGG")
     } catch { XCTFail("Failed to parse \(resultText)") }
   }
 

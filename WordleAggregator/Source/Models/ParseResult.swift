@@ -13,7 +13,7 @@ struct ParseResult {
   var isHardMode: Bool
   var numGuesses: Int
   var maxGuesses: Int
-  var guessSummary: [String]
+  var guessSummary: String
 }
 
 extension ParseResult {
