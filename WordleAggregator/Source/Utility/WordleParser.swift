@@ -9,7 +9,7 @@ import Foundation
 
 enum WordleParseError: Error {
   case inputTextNotValid
-  case scoreNotValid
+  case scoreNotValid(score: String)
   case emojiSummaryNotValid
 }
 
@@ -17,7 +17,7 @@ extension WordleParseError : LocalizedError {
   public var errorDescription: String? {
     switch self {
     case .inputTextNotValid: return "Something about your results doesn't look right!"
-    case .scoreNotValid: return "Your score (e.g. '3/6') doesn't look right!"
+    case .scoreNotValid(let score): return "Your score '\(score)' doesn't look right!"
     case .emojiSummaryNotValid: return "The emoji summary of your guesses doesn't look right!"
     }
   }
@@ -49,6 +49,10 @@ class WordleParser {
 
     var isHardMode = false
     var scoreString = parts[2]
+    guard scoreString.length >= 3 && scoreString.length <= 4 else {
+      throw WordleParseError.scoreNotValid(score: scoreString)
+    }
+
     if scoreString.contains("*") { // hard mode
       isHardMode = true
       scoreString = scoreString.substring(toIndex: scoreString.length - 1)
@@ -59,7 +63,9 @@ class WordleParser {
 
     let numGuesses = scoreParts[0]
     let maxGuesses = scoreParts[1]
-    guard numGuesses > 0 && numGuesses <= maxGuesses else { throw WordleParseError.scoreNotValid }
+    guard numGuesses > 0 && numGuesses <= maxGuesses else {
+      throw WordleParseError.scoreNotValid(score: scoreString)
+    }
 
     let firstGuessIndex = 3
     var guessSummary: [String] = []

@@ -13,7 +13,8 @@ struct ScoreSubmissionView: View {
 
   @State private var answerInput: String = ""
   @State private var isAnswerInfoAlertVisible: Bool = false
-  @State private var numGuesses: Double = 1
+  @State private var isHardMode: Bool = false
+  @State private var numGuesses: Double = 6
 
   private var isInputFilled: Bool { answerInput.length == game.answerLength }
   private var sliderColor: Color
@@ -22,7 +23,6 @@ struct ScoreSubmissionView: View {
     self.game = game
     if let parseResult = parseResult {
       self.parseResult = parseResult
-      self.numGuesses = Double(parseResult.numGuesses)
     }
 
     sliderColor = Colors.Background.Button.primary
@@ -39,22 +39,35 @@ struct ScoreSubmissionView: View {
             .foregroundColor(Colors.Background.Button.secondary)
         }.alert(isPresented: $isAnswerInfoAlertVisible) {
           Alert(title: Text("What's the word?"),
-                message: Text("Don’t know the word yet? No worries! You can add this later on the ‘History’ page!"),
+                message: Text("Don’t know the word yet? I'm working on being able to update this later from the History screen 😉"),
                 dismissButton: .cancel(Text("Siiick!")))
         }
         Spacer()
       }
+
       WordleInputField(length: game.answerLength, inputText: $answerInput)
+
       HStack {
         Text("how many guesses did you make?")
           .font(.title3).fontWeight(.bold)
           .frame(alignment: .leading)
         Spacer()
       }
+
       Slider(value: $numGuesses, in: 1...Double(game.maxGuesses), step: 1)
         .tint(sliderColor)
+
       Text("\(Int(numGuesses)) \(numGuesses > 1 ? "guesses" : "guess")")
         .font(.largeTitle).fontWeight(.semibold)
+
+      Toggle(isOn: $isHardMode.animation()) {
+        Text("Hard Mode \(isHardMode ? "ON" : "OFF")")
+          .font(.body).fontWeight(.semibold)
+          .padding([.leading, .trailing], 10)
+      }
+      .toggleStyle(.button)
+      .tint(Colors.Background.Button.secondary)
+      .cornerRadius(8)
 
       Button(action: {}) {
         Text(isInputFilled ? "Submit" : "I failed this time 😭")
