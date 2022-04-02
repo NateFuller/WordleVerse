@@ -19,6 +19,7 @@
 		CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7327C987C10080E6D0 /* GameRow.swift */; };
 		CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7927C9910A0080E6D0 /* Game.swift */; };
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
+		CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B327F8C0C000DB9D9F /* TestError.swift */; };
 		CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */; };
 		CB78262627F6D3C900D114D8 /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262527F6D3C900D114D8 /* ParseResult.swift */; };
 		CB78262727F6D9D300D114D8 /* String+WordleParserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A3B4327E980A800DB32A4 /* String+WordleParserInput.swift */; };
@@ -71,6 +72,7 @@
 		CB69FB7327C987C10080E6D0 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		CB69FB7927C9910A0080E6D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
+		CB7733B327F8C0C000DB9D9F /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadowModifier.swift; sourceTree = "<group>"; };
 		CB78262527F6D3C900D114D8 /* ParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
 		CB89B5A727E03AE700FB4650 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				CBCCA3A127C94855007B2643 /* WordleAggregatorApp.swift */,
 				CBAE44EC27D53F5900F60C04 /* Data */,
+				CB7733B227F8C0A900DB9D9F /* Error */,
 				CB4A51CA27DAE68700AB5F0D /* Extensions */,
 				CB69FB7827C990FB0080E6D0 /* Models */,
 				CB69FB7227C97F510080E6D0 /* Views */,
@@ -224,6 +227,14 @@
 				CB18720827E199E600BC81C4 /* Score.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CB7733B227F8C0A900DB9D9F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CB7733B327F8C0C000DB9D9F /* TestError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		CBAE44EC27D53F5900F60C04 /* Data */ = {
@@ -468,6 +479,7 @@
 				CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */,
 				CBED677727F6C0DE00D106C0 /* String+Optional.swift in Sources */,
 				CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */,
+				CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */,
 				CBCCA3A227C94855007B2643 /* WordleAggregatorApp.swift in Sources */,
 				CB58F49327D5C51B00914CE5 /* ScoreSubmissionView.swift in Sources */,
 				CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */,
