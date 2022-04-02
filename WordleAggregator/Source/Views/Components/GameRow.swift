@@ -20,7 +20,7 @@ struct GameRow: View {
         .font(.title2)
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 8))
     }
-    .homeScreenRow(alignment: .bottomTrailing)
+    .homeScreenRow(idealHeight: 265, alignment: .bottomTrailing)
     .background(Colors.Background.Gradient.bottomToTop)
     .background(
       Image("background.game")
@@ -37,6 +37,6 @@ struct GameRowView_Previews: PreviewProvider {
     let testGame = Game.Defaults.wordle
 
     return GameRow(viewModel: GameRowViewModel(game: testGame))
-      .previewLayout(.fixed(width: 358, height: 93))
+      .previewLayout(.fixed(width: 358, height: 200))
   }
 }

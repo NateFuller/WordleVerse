@@ -16,7 +16,9 @@ struct HomeScreenView: View {
         VStack(alignment: .leading) {
           ScrollView {
             LazyVStack(spacing: 15) {
-              ForEach(games, id: \.self) { game in
+
+              // Links to games
+              ForEach(games.filter { $0.enabled }, id: \.self) { game in
                 let viewModel = GameRowViewModel(game: game)
                 Link(destination: viewModel.url) {
                   GameRow(viewModel: viewModel)

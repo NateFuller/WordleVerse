@@ -21,6 +21,8 @@
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
 		CB7733B127F8B93500DB9D9F /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = CB7733B027F8B93500DB9D9F /* en.xcloc */; };
 		CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B327F8C0C000DB9D9F /* TestError.swift */; };
+		CB7733B927F900BB00DB9D9F /* HomeScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */; };
+		CB7733BB27F900F100DB9D9F /* View+HomeScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */; };
 		CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */; };
 		CB78262627F6D3C900D114D8 /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262527F6D3C900D114D8 /* ParseResult.swift */; };
 		CB78262727F6D9D300D114D8 /* String+WordleParserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A3B4327E980A800DB32A4 /* String+WordleParserInput.swift */; };
@@ -75,6 +77,8 @@
 		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
 		CB7733B027F8B93500DB9D9F /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		CB7733B327F8C0C000DB9D9F /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenRow.swift; sourceTree = "<group>"; };
+		CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HomeScreenRow.swift"; sourceTree = "<group>"; };
 		CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadowModifier.swift; sourceTree = "<group>"; };
 		CB78262527F6D3C900D114D8 /* ParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
 		CB89B5A727E03AE700FB4650 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
@@ -127,8 +131,10 @@
 		CB18720427E181EE00BC81C4 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */,
+				CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */,
 				CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */,
+				CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */,
+				CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -195,8 +201,8 @@
 				CB7733B227F8C0A900DB9D9F /* Error */,
 				CB4A51CA27DAE68700AB5F0D /* Extensions */,
 				CB69FB7827C990FB0080E6D0 /* Models */,
-				CB69FB7227C97F510080E6D0 /* Views */,
 				CB4A3B3D27E97C4200DB32A4 /* Utility */,
+				CB69FB7227C97F510080E6D0 /* Views */,
 				CB69FB7727C98EA00080E6D0 /* View-Models */,
 			);
 			path = Source;
@@ -477,6 +483,7 @@
 			files = (
 				CB4A3B4627E99EF700DB32A4 /* WordleResultInputField.swift in Sources */,
 				CB18720927E199E600BC81C4 /* Score.swift in Sources */,
+				CB7733BB27F900F100DB9D9F /* View+HomeScreenRow.swift in Sources */,
 				CBEDBA5227D343430007C16D /* FlexibleButton.swift in Sources */,
 				CB18720627E1820000BC81C4 /* TextFieldLimitModifier.swift in Sources */,
 				CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */,
@@ -491,6 +498,7 @@
 				CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */,
 				CBED677727F6C0DE00D106C0 /* String+Optional.swift in Sources */,
 				CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */,
+				CB7733B927F900BB00DB9D9F /* HomeScreenRow.swift in Sources */,
 				CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */,
 				CBCCA3A227C94855007B2643 /* WordleAggregatorApp.swift in Sources */,
 				CB58F49327D5C51B00914CE5 /* ScoreSubmissionView.swift in Sources */,

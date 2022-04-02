@@ -49,7 +49,7 @@ extension Game {
                              resetHour: 0,
                              resetMinute: 0)
     static let wordle2 = Game(title: "Wordle2",
-                              enabled: true,
+                              enabled: false,
                               maxGuesses: 6,
                               url: "https://www.wordle2.in/",
                               numberOfAnswers: 1,
