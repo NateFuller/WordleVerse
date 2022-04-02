@@ -11,10 +11,14 @@ import CoreData
 class Score: NSManagedObject, Decodable {
   enum CodingKeys: CodingKey {
     case answer
-    case gameDate
+    case date
+    case guessSummary
+    case isHardMode
+    case maxGuesses
+    case memo
     case numberOfGuesses
     case submissionTimestamp
-    case win
+    case title
   }
 
   required convenience init(from decoder: Decoder) throws {
@@ -26,10 +30,14 @@ class Score: NSManagedObject, Decodable {
 
     let container = try decoder.container(keyedBy: CodingKeys.self)
     self.answer = try container.decodeIfPresent(String.self, forKey: .answer)
-    self.gameDate = try container.decode(Date.self, forKey: .gameDate)
+    self.date = try container.decode(Date.self, forKey: .date)
+    self.guessSummary = try container.decodeIfPresent(String.self, forKey: .guessSummary)
+    self.isHardMode = try container.decode(Bool.self, forKey: .isHardMode)
+    self.maxGuesses = try container.decode(Int64.self, forKey: .maxGuesses)
+    self.memo = try container.decode(String.self, forKey: .memo)
     self.numberOfGuesses = try container.decode(Int64.self, forKey: .numberOfGuesses)
     self.submissionTimestamp = try container.decode(Date.self, forKey: .submissionTimestamp)
-    self.win = try container.decode(Bool.self, forKey: .win)
+    self.title = try container.decode(String.self, forKey: .title)
   }
 }
 
