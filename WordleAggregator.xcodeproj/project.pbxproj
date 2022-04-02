@@ -19,6 +19,7 @@
 		CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7327C987C10080E6D0 /* GameRow.swift */; };
 		CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7927C9910A0080E6D0 /* Game.swift */; };
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
+		CB7733B127F8B93500DB9D9F /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = CB7733B027F8B93500DB9D9F /* en.xcloc */; };
 		CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B327F8C0C000DB9D9F /* TestError.swift */; };
 		CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */; };
 		CB78262627F6D3C900D114D8 /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262527F6D3C900D114D8 /* ParseResult.swift */; };
@@ -72,6 +73,7 @@
 		CB69FB7327C987C10080E6D0 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		CB69FB7927C9910A0080E6D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CB74180827D5D30700FC7CDD /* WordleInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleInputField.swift; sourceTree = "<group>"; };
+		CB7733B027F8B93500DB9D9F /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		CB7733B327F8C0C000DB9D9F /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadowModifier.swift; sourceTree = "<group>"; };
 		CB78262527F6D3C900D114D8 /* ParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		CB18720727E1905800BC81C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB7733AF27F8B93500DB9D9F /* WordleAggregator Localizations */,
 				CBCCA3A527C94856007B2643 /* Assets.xcassets */,
 				CBEDBA4A27D332450007C16D /* Colors.xcassets */,
 			);
@@ -227,6 +230,14 @@
 				CB18720827E199E600BC81C4 /* Score.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CB7733AF27F8B93500DB9D9F /* WordleAggregator Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				CB7733B027F8B93500DB9D9F /* en.xcloc */,
+			);
+			path = "WordleAggregator Localizations";
 			sourceTree = "<group>";
 		};
 		CB7733B227F8C0A900DB9D9F /* Error */ = {
@@ -438,6 +449,7 @@
 			files = (
 				CBEDBA4B27D332450007C16D /* Colors.xcassets in Resources */,
 				CBCCA3A927C94856007B2643 /* Preview Assets.xcassets in Resources */,
+				CB7733B127F8B93500DB9D9F /* en.xcloc in Resources */,
 				CBCCA3A627C94856007B2643 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +594,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -636,6 +649,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
