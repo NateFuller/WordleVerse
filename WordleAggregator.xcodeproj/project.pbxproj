@@ -169,10 +169,10 @@
 		CB4A51CA27DAE68700AB5F0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */,
 				CBED677627F6C0DE00D106C0 /* String+Optional.swift */,
 				CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */,
 				CB4A3B4327E980A800DB32A4 /* String+WordleParserInput.swift */,
-				CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

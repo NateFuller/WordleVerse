@@ -13,8 +13,7 @@ struct InnerShadowModifier: ViewModifier {
     content
       .overlay(
         RoundedRectangle(cornerRadius: radius)
-          .scale(1.006)
-          .stroke(Colors.Input.shadowPrimary, lineWidth: 4)
+          .stroke(Colors.Background.primary, lineWidth: 4)
           .shadow(color: Colors.Input.shadowPrimary, radius: 4, x: 4, y: 4)
           .clipShape(RoundedRectangle(cornerRadius: radius))
           .shadow(color: Colors.Input.shadowPrimary, radius: 4, x: -4, y: -4)

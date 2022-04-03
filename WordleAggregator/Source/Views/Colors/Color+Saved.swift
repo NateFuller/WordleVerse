@@ -8,13 +8,6 @@
 import SwiftUI
 
 struct Colors {
-  struct Input {
-    static let borderEmpty = Color("input.border.empty")
-    static let borderFilled = Colors.Background.Input.filled
-    static let shadowPrimary = Color("shadow.primary")
-    static let shadowSecondary = Color("shadow.secondary")
-  }
-
   struct Background {
     static let primary = Color("bg.primary")
     static let secondary = Color("bg.secondary")
@@ -36,5 +29,24 @@ struct Colors {
       static let empty = Color("bg.input.empty")
       static let filled = Color("bg.input.filled")
     }
+  }
+
+  struct Foreground {
+    static let primary = Color.gray
+  }
+
+  struct Shadows {
+    static let primary = Color("shadow.primary")
+  }
+
+  struct Input {
+    static let borderEmpty = Color("input.border.empty")
+    static let placeholder = Color("input.placeholder")
+    static let shadowPrimary = Color("input.shadow.primary")
+    static let shadowSecondary = Color("input.shadow.secondary")
+  }
+
+  struct Text {
+    static let infoHighlight = Color("btn.secondary")
   }
 }

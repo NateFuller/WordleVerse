@@ -32,7 +32,7 @@ struct GameRow: View {
   }
 }
 
-struct GameRowView_Previews: PreviewProvider {
+struct GameRow_Previews: PreviewProvider {
   static var previews: some View {
     let testGame = Game.Defaults.wordle
 
