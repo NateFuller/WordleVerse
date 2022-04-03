@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ScoreHistoryView: View {
 
@@ -22,20 +23,18 @@ struct ScoreHistoryView: View {
   var body: some View {
     List {
       ForEach(scores, id: \.self) { score in
-        HStack {
-          Text(score.title ?? "")
-          Text(score.answer ?? "")
-          Text("\(score.numberOfGuesses)/\(score.maxGuesses)")
-        }
+        HistoryRow(score: score)
+          .listRowSeparator(.hidden)
       }
       .onDelete(perform: removeScore)
+      //      .swipeActions { } TODO for edit functionality?
     }
     .alert("Something went wrong", isPresented: $isErrorState, actions: {
       Button("Okay", role: .cancel, action: { errorMessage = nil })
     }, message: {
       Text(errorMessage ?? "")
     })
-    .listRowSeparator(.hidden)
+    .listStyle(.plain)
     .navigationTitle("score history")
   }
 
@@ -61,7 +60,12 @@ struct ScoreHistoryView: View {
 
 struct ScoreHistoryView_Previews: PreviewProvider {
   static var previews: some View {
-    ScoreHistoryView()
-      .environment(\.managedObjectContext, CoreDataStack.context)
+    let testScores = TestScores(context: CoreDataStack.context)
+    try! testScores.addRows()
+
+    return NavigationView {
+      ScoreHistoryView()
+        .environment(\.managedObjectContext, CoreDataStack.context)
+    }
   }
 }
