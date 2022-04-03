@@ -22,13 +22,13 @@ struct WordleResultInputField: View {
       if (userInput.isEmpty) {
         VStack {
           Text("Paste your results here")
+            .foregroundColor(Colors.Input.placeholder)
             .padding()
           Spacer()
         }
       }
       TextEditor(text: $userInput)
         .padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 0))
-        .background(Color(.secondarySystemGroupedBackground))
         .opacity(userInput.isEmpty ? 0.7 : 1)
     }
     .background(Colors.Background.primary)
@@ -41,7 +41,9 @@ struct WordleResultInputField: View {
 
 struct WordleResultInputField_Previews: PreviewProvider {
   static var previews: some View {
-    WordleResultInputField(userInput: .constant(""))
-      .preferredColorScheme(.dark)
+    Background {
+      WordleResultInputField(userInput: .constant(""))
+        .preferredColorScheme(.light)
+    }
   }
 }
