@@ -4,6 +4,7 @@
         <attribute name="answer" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="guessSummary" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isHardMode" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="maxGuesses" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="memo" optional="YES" attributeType="String"/>
@@ -12,6 +13,6 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Score" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="Score" positionX="-63" positionY="-18" width="128" height="179"/>
     </elements>
 </model>

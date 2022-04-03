@@ -13,6 +13,7 @@ class Score: NSManagedObject, Decodable {
     case answer
     case date
     case guessSummary
+    case id
     case isHardMode
     case maxGuesses
     case memo
@@ -38,6 +39,7 @@ class Score: NSManagedObject, Decodable {
     self.numberOfGuesses = try container.decode(Int64.self, forKey: .numberOfGuesses)
     self.submissionTimestamp = try container.decode(Date.self, forKey: .submissionTimestamp)
     self.title = try container.decode(String.self, forKey: .title)
+    self.id = try container.decode(UUID.self, forKey: .id)
   }
 }
 
