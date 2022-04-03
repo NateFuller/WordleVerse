@@ -11,7 +11,7 @@ struct WordleInputField: View {
 
   // MARK: - Public Properties
 
-  var length: Int
+  let length: Int
   @Binding var inputText: String
 
   // MARK: - Private Properties
@@ -53,7 +53,7 @@ struct WordleInputField: View {
 
   private var squares: some View {
     HStack() {
-      ForEach(0..<length) { index in
+      ForEach(0..<length, id:\.self) { index in
         ZStack {
           Rectangle()
             .fill(!inputText[index].isEmpty ? Colors.Background.Input.filled : Colors.Background.Input.empty)
@@ -74,8 +74,7 @@ struct WordleInputField: View {
 
 struct WordleInputField_Previews: PreviewProvider {
   static var previews: some View {
-    VStack {
-      WordleInputField(length: 5, inputText: .constant("weir"))
-    }
+    WordleInputField(length: 5, inputText: .constant("weir"))
+      .previewLayout(.sizeThatFits)
   }
 }
