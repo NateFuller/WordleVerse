@@ -36,81 +36,85 @@ struct ScoreSubmissionView: View {
   }
 
   var body: some View {
-    ScrollView {
-      VStack(spacing: 16) {
-        HStack {
-          Text("what was today's word?")
-            .font(.title3).fontWeight(.bold)
-            .frame(alignment: .leading)
-          Button(action: { isAnswerInfoAlertVisible = true }) {
-            Image(systemName: "info.circle")
-              .foregroundColor(Colors.Background.Button.secondary)
-          }.alert(isPresented: $isAnswerInfoAlertVisible) {
-            Alert(title: Text("What's the word?"),
-                  message: Text("Don’t know the word yet? I'm working on being able to update this later from the History screen 😉"),
-                  dismissButton: .cancel(Text("Siiick!")))
+    Background {
+      ScrollView {
+        VStack(spacing: 16) {
+          HStack {
+            Text("what was today's word?")
+              .font(.title3).fontWeight(.bold)
+              .frame(alignment: .leading)
+            Button(action: { isAnswerInfoAlertVisible = true }) {
+              Image(systemName: "info.circle")
+                .foregroundColor(Colors.Background.Button.secondary)
+            }
+            .alert(isPresented: $isAnswerInfoAlertVisible) {
+              Alert(title: Text("What's the word?"),
+                    message: Text("Don’t know the word yet? I'm working on being able to update this later from the History screen 😉"),
+                    dismissButton: .cancel(Text("Siiick!")))
+            }
+            Spacer()
           }
+
+          WordleInputField(length: game.answerLength, inputText: $answerInput)
+
+          HStack {
+            Text("how many guesses did you make?")
+              .font(.title3).fontWeight(.bold)
+              .frame(alignment: .leading)
+            Spacer()
+          }
+
+          // TODO make slider have 1 extra value at end indicating failure
+          Slider(value: $numGuesses, in: 1...Double(maxGuesses + 1), step: 1)
+            .tint(sliderColor)
+
+          Text("\(Int(numGuesses)) \(numGuesses > 1 ? "guesses" : "guess")")
+            .font(.largeTitle).fontWeight(.semibold)
+
+          Toggle(isOn: $isHardMode.animation()) {
+            Text("Hard Mode \(isHardMode ? "ON" : "OFF")")
+              .font(.body).fontWeight(.semibold)
+              .padding([.leading, .trailing], 10)
+          }
+          .toggleStyle(.button)
+          .tint(Colors.Background.Button.secondary)
+          .cornerRadius(8)
+
+          Button(action: {
+            if isInputFilled {
+              self.saveScore()
+            } else {
+              isReportingFail = true
+            }
+          }) {
+            Text(isInputFilled || Int(numGuesses) > maxGuesses ? "Submit" : "I didn't guess correctly 😕")
+              .foregroundColor(.white)
+              .font(.body).fontWeight(.semibold)
+              .padding()
+              .background(isInputFilled ? Colors.Background.Button.primary : Colors.Background.Button.tertiary)
+              .cornerRadius(8)
+          }
+          .alert(
+            "Reporting a fail?",
+            isPresented: $isReportingFail,
+            actions: {
+              Button("Cancel", role: .cancel, action: { isReportingFail = false })
+              Button("Confirm") { self.saveScore() }
+            },
+            message: { Text("Respect 🤝 You'll get tomorrow's puzzle!") }
+          )
+          .alert(
+            "Something went wrong!",
+            isPresented: $isErrorState,
+            actions: {
+              Button("Okay", role: .cancel, action: { errorMessage = nil })
+            },
+            message: { Text(errorMessage ?? "") }
+          )
           Spacer()
         }
-
-        WordleInputField(length: game.answerLength, inputText: $answerInput)
-
-        HStack {
-          Text("how many guesses did you make?")
-            .font(.title3).fontWeight(.bold)
-            .frame(alignment: .leading)
-          Spacer()
-        }
-
-        Slider(value: $numGuesses, in: 1...Double(maxGuesses), step: 1)
-          .tint(sliderColor)
-
-        Text("\(Int(numGuesses)) \(numGuesses > 1 ? "guesses" : "guess")")
-          .font(.largeTitle).fontWeight(.semibold)
-
-        Toggle(isOn: $isHardMode.animation()) {
-          Text("Hard Mode \(isHardMode ? "ON" : "OFF")")
-            .font(.body).fontWeight(.semibold)
-            .padding([.leading, .trailing], 10)
-        }
-        .toggleStyle(.button)
-        .tint(Colors.Background.Button.secondary)
-        .cornerRadius(8)
-
-        Button(action: {
-          if isInputFilled {
-            self.saveScore()
-          } else {
-            isReportingFail = true
-          }
-        }) {
-          Text(isInputFilled ? "Submit" : "I failed this time 😭")
-            .foregroundColor(.white)
-            .font(.body).fontWeight(.semibold)
-            .padding()
-            .background(isInputFilled ? Colors.Background.Button.primary : Colors.Background.Button.tertiary)
-            .cornerRadius(8)
-        }
-        .alert(
-          "Reporting a fail?",
-          isPresented: $isReportingFail,
-          actions: {
-            Button("Cancel", role: .cancel, action: { isReportingFail = false })
-            Button("Confirm") { self.saveScore() }
-          },
-          message: { Text("Respect 🤝 You'll get tomorrow's puzzle!") }
-        )
-        .alert(
-          "Something went wrong!",
-          isPresented: $isErrorState,
-          actions: {
-            Button("Okay", role: .cancel, action: { errorMessage = nil })
-          },
-          message: { Text(errorMessage ?? "") }
-        )
-        Spacer()
+        .padding(16)
       }
-      .padding(16)
     }
     .navigationTitle("today's \(game.title)")
   }

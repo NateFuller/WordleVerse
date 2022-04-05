@@ -21,20 +21,23 @@ struct ScoreHistoryView: View {
   @State private var errorMessage: String? { didSet { isErrorState = !errorMessage.isNilOrEmpty }}
 
   var body: some View {
-    List {
-      ForEach(scores, id: \.self) { score in
-        HistoryRow(score: score)
-          .listRowSeparator(.hidden)
+    Background {
+      List {
+        ForEach(scores, id: \.self) { score in
+          HistoryRow(score: score)
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
+        }
+        .onDelete(perform: removeScore)
+        //      .swipeActions { } TODO for edit functionality?
       }
-      .onDelete(perform: removeScore)
-      //      .swipeActions { } TODO for edit functionality?
+      .alert("Something went wrong", isPresented: $isErrorState, actions: {
+        Button("Okay", role: .cancel, action: { errorMessage = nil })
+      }, message: {
+        Text(errorMessage ?? "")
+      })
+      .listStyle(.plain)
     }
-    .alert("Something went wrong", isPresented: $isErrorState, actions: {
-      Button("Okay", role: .cancel, action: { errorMessage = nil })
-    }, message: {
-      Text(errorMessage ?? "")
-    })
-    .listStyle(.plain)
     .navigationTitle("score history")
   }
 
@@ -65,6 +68,7 @@ struct ScoreHistoryView_Previews: PreviewProvider {
 
     return NavigationView {
       ScoreHistoryView()
+        .preferredColorScheme(.dark)
         .environment(\.managedObjectContext, CoreDataStack.context)
     }
   }

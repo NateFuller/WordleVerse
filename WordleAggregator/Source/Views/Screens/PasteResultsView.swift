@@ -19,41 +19,51 @@ struct PasteResultsView: View {
   }
 
   var body: some View {
-    VStack {
-      WordleResultInputField(userInput: $inputText)
-        .frame(height: 180)
-      NavigationLink(
-        destination: ScoreSubmissionView(game: Game.Defaults.wordle,
-                                         parseResult: currentParseResult),
-        isActive: $validResultParsed
-      ) {
-        EmptyView()
-      }
-      .isDetailLink(false)
+    Background {
+      VStack {
+        WordleResultInputField(userInput: $inputText)
+          .frame(height: 180)
 
-
-      Button(action: {
-        do {
-          currentParseResult = try WordleParser.parse(resultText: inputText)
-          validResultParsed = true
-        } catch {
-          errorMessage = error.localizedDescription
+        NavigationLink(
+          destination: ScoreSubmissionView(game: Game.Defaults.wordle,
+                                           parseResult: currentParseResult),
+          isActive: $validResultParsed
+        ) {
+          EmptyView()
         }
-      }) {
-        Text(inputText.isEmpty ? "Paste your \"Share\" text above!" : "Let's go 😤")
-          .foregroundColor(.white)
-          .font(.body).fontWeight(.semibold)
-          .padding()
-          .background(inputText.isEmpty ? Colors.Background.Button.tertiary : Colors.Background.Button.primary)
-          .cornerRadius(8)
+        .isDetailLink(false)
+
+        Button(action: {
+          do {
+            currentParseResult = try WordleParser.parse(resultText: inputText)
+            validResultParsed = true
+          } catch {
+            errorMessage = error.localizedDescription
+          }
+        }) {
+          Text(inputText.isEmpty ? "Paste your \"Share\" text above!" : "Let's go 😤")
+            .foregroundColor(.white)
+            .font(.body).fontWeight(.semibold)
+            .padding()
+            .background(inputText.isEmpty ? Colors.Background.Button.tertiary : Colors.Background.Button.primary)
+            .cornerRadius(8)
+        }
+        .disabled(inputText.isEmpty)
+        .alert(Text("Awww dangit 😞"), isPresented: $isErrorState, actions: {
+          Button("Okay!", role: .cancel, action: {})
+        }, message: {
+          Text(errorMessage ?? "")
+        })
+
+        Button(action: { validResultParsed = true }) {
+          Text("Skip this step")
+            .underline()
+        }
+        .foregroundColor(Colors.Text.link)
+        .padding()
+
+        Spacer()
       }
-      .disabled(inputText.isEmpty)
-      .alert(Text("Awww dangit 😞"), isPresented: $isErrorState, actions: {
-        Button("Okay!", role: .cancel, action: {})
-      }, message: {
-        Text(errorMessage ?? "")
-      })
-      Spacer()
     }
     .navigationTitle("Submit your score 📋")
     .onAppear { validResultParsed = false }
@@ -62,9 +72,9 @@ struct PasteResultsView: View {
 
 struct PasteResultsView_Previews: PreviewProvider {
   static var previews: some View {
-    NavigationView {
+//    NavigationView {
       PasteResultsView()
         .preferredColorScheme(.dark)
-    }
+//    }
   }
 }
