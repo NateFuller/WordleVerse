@@ -43,7 +43,7 @@ struct WordleResultInputField_Previews: PreviewProvider {
   static var previews: some View {
     Background {
       WordleResultInputField(userInput: .constant(""))
-        .preferredColorScheme(.light)
+        .preferredColorScheme(.dark)
     }
   }
 }

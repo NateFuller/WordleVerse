@@ -22,7 +22,7 @@ struct PasteResultsView: View {
     Background {
       VStack {
         WordleResultInputField(userInput: $inputText)
-          .frame(height: 180)
+          .frame(height: 225)
 
         NavigationLink(
           destination: ScoreSubmissionView(game: Game.Defaults.wordle,
@@ -42,10 +42,10 @@ struct PasteResultsView: View {
           }
         }) {
           Text(inputText.isEmpty ? "Paste your \"Share\" text above!" : "Let's go 😤")
-            .foregroundColor(.white)
+            .foregroundColor(Colors.Text.primary)
             .font(.body).fontWeight(.semibold)
             .padding()
-            .background(inputText.isEmpty ? Colors.Background.Button.tertiary : Colors.Background.Button.primary)
+            .background(inputText.isEmpty ? Colors.Button.Tertiary.background : Colors.Button.Primary.background)
             .cornerRadius(8)
         }
         .disabled(inputText.isEmpty)
@@ -72,9 +72,9 @@ struct PasteResultsView: View {
 
 struct PasteResultsView_Previews: PreviewProvider {
   static var previews: some View {
-//    NavigationView {
+    NavigationView {
       PasteResultsView()
         .preferredColorScheme(.dark)
-//    }
+    }
   }
 }

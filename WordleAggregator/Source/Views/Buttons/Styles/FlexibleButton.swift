@@ -14,7 +14,7 @@ struct FlexibleButton: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
       .font(.system(size: 17).weight(.semibold))
-      .foregroundColor(.white)
+      .foregroundColor(Colors.Text.primary)
       .homeScreenRow()
       .background(Colors.Background.Gradient.bottomToTop)
       .background(color)

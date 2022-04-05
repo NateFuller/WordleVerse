@@ -34,13 +34,13 @@ struct HomeScreenView: View {
                 Text("Submit Results")
               }
               .isDetailLink(false)
-              .buttonStyle(FlexibleButton(color: Colors.Background.Button.primary))
+              .buttonStyle(FlexibleButton(color: Colors.Button.Primary.background))
 
               // History Button
               NavigationLink(destination: ScoreHistoryView()) {
                 Text("History")
               }
-              .buttonStyle(FlexibleButton(color: Colors.Background.Button.secondary))
+              .buttonStyle(FlexibleButton(color: Colors.Button.Secondary.background))
             }
           }
           Spacer()

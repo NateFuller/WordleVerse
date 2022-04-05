@@ -23,6 +23,7 @@ struct ScoreSubmissionView: View {
 
   private var sliderColor: Color
   private var isInputFilled: Bool { answerInput.length == game.answerLength }
+  private var isSuccess: Bool { isInputFilled && Int(numGuesses) < maxGuesses }
   private var maxGuesses: Int { parseResult?.maxGuesses ?? game.maxGuesses }
 
   init(game: Game, parseResult: ParseResult?) {
@@ -32,7 +33,7 @@ struct ScoreSubmissionView: View {
       self.isHardMode = parseResult.isHardMode
       self.numGuesses = Double(parseResult.numGuesses)
     }
-    self.sliderColor = Colors.Background.Button.primary
+    self.sliderColor = Colors.Button.Primary.background
   }
 
   var body: some View {
@@ -45,7 +46,7 @@ struct ScoreSubmissionView: View {
               .frame(alignment: .leading)
             Button(action: { isAnswerInfoAlertVisible = true }) {
               Image(systemName: "info.circle")
-                .foregroundColor(Colors.Background.Button.secondary)
+                .foregroundColor(Colors.Button.Secondary.text)
             }
             .alert(isPresented: $isAnswerInfoAlertVisible) {
               Alert(title: Text("What's the word?"),
@@ -77,7 +78,7 @@ struct ScoreSubmissionView: View {
               .padding([.leading, .trailing], 10)
           }
           .toggleStyle(.button)
-          .tint(Colors.Background.Button.secondary)
+          .tint(Colors.Button.Secondary.background)
           .cornerRadius(8)
 
           Button(action: {
@@ -87,11 +88,11 @@ struct ScoreSubmissionView: View {
               isReportingFail = true
             }
           }) {
-            Text(isInputFilled || Int(numGuesses) > maxGuesses ? "Submit" : "I didn't guess correctly 😕")
-              .foregroundColor(.white)
+            Text(isSuccess ? "Submit" : "I didn't guess correctly 😕")
+              .foregroundColor(isSuccess ? Colors.Button.Primary.text : Colors.Button.Tertiary.text)
               .font(.body).fontWeight(.semibold)
               .padding()
-              .background(isInputFilled ? Colors.Background.Button.primary : Colors.Background.Button.tertiary)
+              .background(isInputFilled ? Colors.Button.Primary.background : Colors.Button.Tertiary.background)
               .cornerRadius(8)
           }
           .alert(
@@ -151,6 +152,6 @@ struct ScoreSubmissionView_Previews: PreviewProvider {
         game: Game.Defaults.wordle,
         parseResult: ParseResult.fixture
       )
-    }.preferredColorScheme(.dark)
+    }.preferredColorScheme(.light)
   }
 }

@@ -17,7 +17,7 @@ struct HistoryRow: View {
       VStack(alignment: .leading, spacing: 0) {
         HStack(alignment: .top) {
           Text(score.title ?? "")
-            .foregroundColor(.white)
+            .foregroundColor(Colors.Text.primary)
             .font(.footnote)
             .fontWeight(.semibold)
           Spacer()
@@ -27,17 +27,17 @@ struct HistoryRow: View {
         }
         HStack {
           Text("\(score.numberOfGuesses) guesses")
-            .foregroundColor(.white)
+            .foregroundColor(Colors.Text.primary)
             .font(.system(size: 48))
             .minimumScaleFactor(0.5)
         }
         HStack {
           Text(score.date?.longDateString() ?? "")
-            .foregroundColor(.white)
+            .foregroundColor(Colors.Text.primary)
           Spacer()
           Text(score.answer?.uppercased() ?? "")
             .tracking(2)
-            .foregroundColor(.white)
+            .foregroundColor(Colors.Text.primary)
             .blur(radius: isAnswerHidden ? 6 : 0)
             .animation(.easeIn, value: isAnswerHidden)
         }
@@ -45,7 +45,7 @@ struct HistoryRow: View {
     }
     .padding(8)
     .background(Colors.Background.Gradient.bottomToTop)
-    .background(Colors.Background.Button.primary)
+    .background(Colors.Button.Primary.background)
     .cornerRadius(8)
     .onTapGesture {
       isAnswerHidden.toggle()
@@ -62,9 +62,9 @@ struct HistoryRow: View {
         .fontWeight(.bold)
     }
     .padding(8)
-    .foregroundColor(.white)
+    .foregroundColor(Colors.Text.primary)
     .background(
-      RoundedRectangle(cornerRadius: 6).fill(Colors.Text.infoHighlight)
+      RoundedRectangle(cornerRadius: 6).fill(Colors.Background.infoHighlight)
     )
     .shadow(color: Colors.Shadows.primary, radius: 4, x: 2, y: 2)
   }
@@ -84,6 +84,7 @@ struct HistoryRow_Previews: PreviewProvider {
     score.id = UUID()
 
     return HistoryRow(score: score)
+      .preferredColorScheme(.dark)
       .previewLayout(.sizeThatFits)
   }
 }

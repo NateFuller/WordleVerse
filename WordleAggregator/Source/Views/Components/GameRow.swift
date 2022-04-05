@@ -15,7 +15,7 @@ struct GameRow: View {
   var body: some View {
     ZStack {
       Text(viewModel.title)
-        .foregroundColor(.white)
+        .foregroundColor(Colors.Text.primary)
         .fontWeight(.bold)
         .font(.title2)
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 8))

@@ -60,7 +60,7 @@ struct WordleInputField: View {
             .border(!inputText[index].isEmpty ? Colors.Background.Input.filled : Colors.Input.borderEmpty, width: 2)
           Text(inputText[index].uppercased())
             .font(.system(size: 500))
-            .foregroundColor(.white)
+            .foregroundColor(Colors.Text.primary)
             .fontWeight(.bold)
             .minimumScaleFactor(0.01)
             .padding(80 / CGFloat(length))
@@ -75,6 +75,7 @@ struct WordleInputField: View {
 struct WordleInputField_Previews: PreviewProvider {
   static var previews: some View {
     WordleInputField(length: 5, inputText: .constant("weir"))
+      .preferredColorScheme(.light)
       .previewLayout(.sizeThatFits)
   }
 }

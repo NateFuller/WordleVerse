@@ -49,27 +49,27 @@ class WordleParser {
 
     var isHardMode = false
     var scoreString = parts[2]
-    guard scoreString.length >= 3 && scoreString.length <= 4 else {
-      throw WordleParseError.scoreNotValid(score: scoreString)
-    }
 
     if scoreString.contains("*") { // hard mode
       isHardMode = true
       scoreString = scoreString.substring(toIndex: scoreString.length - 1)
     }
 
-    let scoreParts = scoreString.split(separator: "/").compactMap { Int($0) }
-    guard 2 >= scoreParts.count && scoreParts.count <= 3 else { throw WordleParseError.inputTextNotValid }
+    let scoreParts = scoreString.split(separator: "/")
+    guard scoreParts.count == 2, let maxGuesses = Int(scoreParts[1]) else {
+      throw WordleParseError.scoreNotValid(score: scoreString)
+    }
 
-    let numGuesses = scoreParts[0]
-    let maxGuesses = scoreParts[1]
-    guard numGuesses > 0 && numGuesses <= maxGuesses else {
+    let numGuesses = Int(scoreParts[0])
+//    let didFail = numGuesses == nil
+
+    guard numGuesses! > 0 && numGuesses! <= maxGuesses else {
       throw WordleParseError.scoreNotValid(score: scoreString)
     }
 
     let firstGuessIndex = 3
     var guessSummary: String = ""
-    for index in firstGuessIndex..<(firstGuessIndex + numGuesses) {
+    for index in firstGuessIndex..<(firstGuessIndex + numGuesses!) {
       guard parts[index].length == Game.Defaults.wordle.answerLength else {
         throw WordleParseError.emojiSummaryNotValid
       }
@@ -80,8 +80,8 @@ class WordleParser {
     return ParseResult(gameTitle: parts[0],
                        gameMemo: parts[1],
                        isHardMode: isHardMode,
-                       numGuesses: numGuesses,
-                       maxGuesses: scoreParts[1],
+                       numGuesses: numGuesses!,
+                       maxGuesses: maxGuesses,
                        guessSummary: guessSummary.trimmingCharacters(in: .newlines))
   }
 

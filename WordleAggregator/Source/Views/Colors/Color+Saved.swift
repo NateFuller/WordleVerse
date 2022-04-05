@@ -8,15 +8,27 @@
 import SwiftUI
 
 struct Colors {
+  struct Button {
+    struct Primary {
+      static let background = Color("btn.primary.background")
+      static let text = Color("btn.primary.text")
+    }
+
+    struct Secondary {
+      static let background = Color("btn.secondary.background")
+      static let text = Color("btn.secondary.text")
+    }
+
+    struct Tertiary {
+      static let background = Color("btn.tertiary.background")
+      static let text = Color("btn.tertiary.text")
+    }
+  }
+
   struct Background {
     static let primary = Color("bg.primary")
     static let secondary = Color("bg.secondary")
-
-    struct Button {
-      static let primary = Color("btn.primary")
-      static let secondary = Color("btn.secondary")
-      static let tertiary = Color("btn.tertiary")
-    }
+    static let infoHighlight = Colors.Button.Secondary.background
 
     struct Gradient {
       static let bottomToTop = LinearGradient(colors: [.black.opacity(0.5), .clear], startPoint: .bottom, endPoint: .top)
@@ -48,5 +60,7 @@ struct Colors {
 
   struct Text {
     static let infoHighlight = Color("btn.secondary")
+    static let link = Color("text.link")
+    static let primary = Color("text.primary")
   }
 }

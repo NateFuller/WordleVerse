@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InnerShadowModifier: ViewModifier {
-  @State var radius: CGFloat = 15
+  var radius: CGFloat = 15
   func body(content: Content) -> some View {
     content
       .overlay(
