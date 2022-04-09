@@ -13,7 +13,7 @@ struct ScoreHistoryView: View {
   @FetchRequest(
     entity: Score.entity(),
     sortDescriptors: [
-      NSSortDescriptor(keyPath: \Score.date, ascending: true)
+      NSSortDescriptor(keyPath: \Score.date, ascending: false)
     ]
   ) var scores: FetchedResults<Score>
 
