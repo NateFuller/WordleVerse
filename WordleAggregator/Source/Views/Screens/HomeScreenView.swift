@@ -49,6 +49,7 @@ struct HomeScreenView: View {
         .padding(16)
       }
     }
+    .navigationViewStyle(.stack)
     .environment(\.rootPresentationMode, self.$isPresented)
   }
 }
