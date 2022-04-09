@@ -41,6 +41,8 @@ class Score: NSManagedObject, Decodable {
     self.title = try container.decode(String.self, forKey: .title)
     self.id = try container.decode(UUID.self, forKey: .id)
   }
+
+  var success: Bool { self.numberOfGuesses <= self.maxGuesses }
 }
 
 enum DecoderConfigurationError: Error {

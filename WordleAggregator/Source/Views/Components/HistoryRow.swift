@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HistoryRow: View {
-  var score: Score
+  var viewModel: ScoreHistoryViewModel
 
   @State private var isAnswerHidden: Bool = true
 
@@ -16,26 +16,24 @@ struct HistoryRow: View {
     ZStack {
       VStack(alignment: .leading, spacing: 0) {
         HStack(alignment: .top) {
-          Text(score.title ?? "")
+          viewModel.titleAndMemoText
             .foregroundColor(Colors.Text.primary)
             .font(.footnote)
             .fontWeight(.semibold)
           Spacer()
-          if score.isHardMode {
-            hardModeBadge
-          }
+          viewModel.hardModeBadge
         }
         HStack {
-          Text("\(score.numberOfGuesses) guesses")
+          viewModel.numGuessesText
             .foregroundColor(Colors.Text.primary)
             .font(.system(size: 48))
             .minimumScaleFactor(0.5)
         }
         HStack {
-          Text(score.date?.longDateString() ?? "")
+          viewModel.dateText
             .foregroundColor(Colors.Text.primary)
           Spacer()
-          Text(score.answer?.uppercased() ?? "")
+          viewModel.answerText
             .tracking(2)
             .foregroundColor(Colors.Text.primary)
             .blur(radius: isAnswerHidden ? 6 : 0)
@@ -75,15 +73,15 @@ struct HistoryRow_Previews: PreviewProvider {
     let score = Score(context: CoreDataStack.context)
     score.answer = "crane"
     score.date = Date()
-    score.numberOfGuesses = 4
+    score.numberOfGuesses = 7
     score.maxGuesses = 6
     score.title = "Wordle"
     score.memo = "275"
-    score.isHardMode = true
+    score.isHardMode = false
     score.submissionTimestamp = Date()
     score.id = UUID()
 
-    return HistoryRow(score: score)
+    return HistoryRow(viewModel: ScoreHistoryViewModel(score: score))
       .preferredColorScheme(.dark)
       .previewLayout(.sizeThatFits)
   }

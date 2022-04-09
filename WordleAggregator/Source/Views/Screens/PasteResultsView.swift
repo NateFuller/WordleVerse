@@ -10,9 +10,10 @@ import SwiftUI
 struct PasteResultsView: View {
   var game: Game = Game.Defaults.wordle
 
+  @State private var currentParseResult: ParseResult?
+
   @State var inputText: String = ""
   @State private var validResultParsed: Bool = false
-  @State private var currentParseResult: ParseResult?
   @State private var isErrorState: Bool = false
   @State private var errorMessage: String? {
     didSet { isErrorState = !errorMessage.isNilOrEmpty }
@@ -24,14 +25,14 @@ struct PasteResultsView: View {
         WordleResultInputField(userInput: $inputText)
           .frame(height: 225)
 
-        NavigationLink(
-          destination: ScoreSubmissionView(game: Game.Defaults.wordle,
-                                           parseResult: currentParseResult),
-          isActive: $validResultParsed
-        ) {
-          EmptyView()
-        }
-        .isDetailLink(false)
+          NavigationLink(
+            destination: ScoreSubmissionView(game: Game.Defaults.wordle,
+                                             parseResult: currentParseResult ?? ParseResult.emptyWordle),
+            isActive: $validResultParsed
+          ) {
+            EmptyView()
+          }
+          .isDetailLink(false)
 
         Button(action: {
           do {
@@ -49,13 +50,16 @@ struct PasteResultsView: View {
             .cornerRadius(8)
         }
         .disabled(inputText.isEmpty)
-        .alert(Text("Awww dangit 😞"), isPresented: $isErrorState, actions: {
+        .alert(Text("Submission error"), isPresented: $isErrorState, actions: {
           Button("Okay!", role: .cancel, action: {})
         }, message: {
           Text(errorMessage ?? "")
         })
 
-        Button(action: { validResultParsed = true }) {
+        Button(action: {
+          currentParseResult = ParseResult.emptyWordle
+          validResultParsed = true
+        }) {
           Text("Skip this step")
             .underline()
         }

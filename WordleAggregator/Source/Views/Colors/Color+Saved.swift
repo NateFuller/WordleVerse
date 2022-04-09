@@ -28,6 +28,7 @@ struct Colors {
   struct Background {
     static let primary = Color("bg.primary")
     static let secondary = Color("bg.secondary")
+    static let warning = Color("bg.warning")
     static let infoHighlight = Colors.Button.Secondary.background
 
     struct Gradient {

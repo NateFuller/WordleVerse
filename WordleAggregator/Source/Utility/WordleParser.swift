@@ -10,6 +10,7 @@ import Foundation
 enum WordleParseError: Error {
   case inputTextNotValid
   case scoreNotValid(score: String)
+  case emojiSummaryDoesNotMatch(score: String, numGuesses: String)
   case emojiSummaryNotValid
 }
 
@@ -18,6 +19,8 @@ extension WordleParseError : LocalizedError {
     switch self {
     case .inputTextNotValid: return "Something about your results doesn't look right!"
     case .scoreNotValid(let score): return "Your score '\(score)' doesn't look right!"
+    case .emojiSummaryDoesNotMatch(let score, let numGuesses):
+      return "Based on your score '\(score)', your emoji summary should contain exactly \(numGuesses) rows."
     case .emojiSummaryNotValid: return "The emoji summary of your guesses doesn't look right!"
     }
   }
@@ -61,15 +64,17 @@ class WordleParser {
     }
 
     let numGuesses = Int(scoreParts[0])
-//    let didFail = numGuesses == nil
-
-    guard numGuesses! > 0 && numGuesses! <= maxGuesses else {
+    guard numGuesses == nil || (numGuesses! > 0 && numGuesses! <= maxGuesses) else {
       throw WordleParseError.scoreNotValid(score: scoreString)
     }
 
     let firstGuessIndex = 3
     var guessSummary: String = ""
-    for index in firstGuessIndex..<(firstGuessIndex + numGuesses!) {
+    guard firstGuessIndex + (numGuesses ?? maxGuesses) == parts.count else {
+      throw WordleParseError.emojiSummaryDoesNotMatch(score: scoreString, numGuesses: "\(numGuesses ?? maxGuesses)")
+    }
+
+    for index in firstGuessIndex..<(firstGuessIndex + (numGuesses ?? maxGuesses)) {
       guard parts[index].length == Game.Defaults.wordle.answerLength else {
         throw WordleParseError.emojiSummaryNotValid
       }
@@ -77,10 +82,11 @@ class WordleParser {
       guessSummary.append("\(try convertEmoji(parts[index]))\n")
     }
 
-    return ParseResult(gameTitle: parts[0],
+    return ParseResult(success: numGuesses != nil,
+                       gameTitle: parts[0],
                        gameMemo: parts[1],
                        isHardMode: isHardMode,
-                       numGuesses: numGuesses!,
+                       numGuesses: numGuesses ?? maxGuesses + 1,
                        maxGuesses: maxGuesses,
                        guessSummary: guessSummary.trimmingCharacters(in: .newlines))
   }

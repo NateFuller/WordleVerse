@@ -24,7 +24,7 @@ struct ScoreHistoryView: View {
     Background {
       List {
         ForEach(scores, id: \.self) { score in
-          HistoryRow(score: score)
+          HistoryRow(viewModel: ScoreHistoryViewModel(score: score))
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
         }

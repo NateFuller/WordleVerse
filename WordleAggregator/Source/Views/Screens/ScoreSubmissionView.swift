@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScoreSubmissionView: View {
   var game: Game
-  var parseResult: ParseResult?
+  @State var parseResult: ParseResult
 
   @Environment(\.rootPresentationMode) private var rootPresentationMode: Binding<RootPresentationMode>
 
@@ -18,22 +18,19 @@ struct ScoreSubmissionView: View {
   @State private var isAnswerInfoAlertVisible: Bool = false
   @State private var isErrorState: Bool = false
   @State private var isReportingFail: Bool = false
-  @State private var isHardMode: Bool = false
-  @State private var numGuesses: Double = 6
 
-  private var sliderColor: Color
   private var isInputFilled: Bool { answerInput.length == game.answerLength }
-  private var isSuccess: Bool { isInputFilled && Int(numGuesses) < maxGuesses }
-  private var maxGuesses: Int { parseResult?.maxGuesses ?? game.maxGuesses }
+  private var isSuccess: Bool { isInputFilled && withinMaxGuesses }
+  private var withinMaxGuesses: Bool { Int(parseResult.numGuesses) <= maxGuesses }
 
-  init(game: Game, parseResult: ParseResult?) {
+  @State private var sliderValue: Double
+
+  private var maxGuesses: Int { parseResult.maxGuesses }
+
+  init(game: Game, parseResult: ParseResult) {
     self.game = game
-    if let parseResult = parseResult {
-      self.parseResult = parseResult
-      self.isHardMode = parseResult.isHardMode
-      self.numGuesses = Double(parseResult.numGuesses)
-    }
-    self.sliderColor = Colors.Button.Primary.background
+    self.parseResult = parseResult
+    sliderValue = Double(parseResult.numGuesses)
   }
 
   var body: some View {
@@ -65,15 +62,25 @@ struct ScoreSubmissionView: View {
             Spacer()
           }
 
-          // TODO make slider have 1 extra value at end indicating failure
-          Slider(value: $numGuesses, in: 1...Double(maxGuesses + 1), step: 1)
-            .tint(sliderColor)
+          Slider(value: Binding<Double>(
+            get: { $sliderValue.wrappedValue },
+            set: {
+              sliderValue = $0
+              parseResult.numGuesses = Int($0)
+            }
+          ), in: 1...(Double(maxGuesses) + 1), step: 1)
+            .tint(withinMaxGuesses ? Colors.Button.Primary.background : Colors.Background.warning)
 
-          Text("\(Int(numGuesses)) \(numGuesses > 1 ? "guesses" : "guess")")
-            .font(.largeTitle).fontWeight(.semibold)
+          if withinMaxGuesses {
+            Text("\(Int(sliderValue)) \(Int(sliderValue) > 1 ? "guesses" : "guess")")
+              .font(.largeTitle).fontWeight(.semibold)
+          } else {
+            Text("X guesses")
+              .font(.largeTitle).fontWeight(.semibold)
+          }
 
-          Toggle(isOn: $isHardMode.animation()) {
-            Text("Hard Mode \(isHardMode ? "ON" : "OFF")")
+          Toggle(isOn: $parseResult.isHardMode.animation()) {
+            Text("Hard Mode \(parseResult.isHardMode ? "ON" : "OFF")")
               .font(.body).fontWeight(.semibold)
               .padding([.leading, .trailing], 10)
           }
@@ -82,8 +89,8 @@ struct ScoreSubmissionView: View {
           .cornerRadius(8)
 
           Button(action: {
-            if isInputFilled {
-              self.saveScore()
+            if isSuccess {
+              saveScore()
             } else {
               isReportingFail = true
             }
@@ -92,15 +99,21 @@ struct ScoreSubmissionView: View {
               .foregroundColor(isSuccess ? Colors.Button.Primary.text : Colors.Button.Tertiary.text)
               .font(.body).fontWeight(.semibold)
               .padding()
-              .background(isInputFilled ? Colors.Button.Primary.background : Colors.Button.Tertiary.background)
+              .background(content: {
+                if !isInputFilled {
+                  Colors.Button.Tertiary.background
+                } else {
+                  isSuccess ? Colors.Button.Primary.background : Colors.Background.warning
+                }
+              })
               .cornerRadius(8)
           }
           .alert(
             "Reporting a fail?",
             isPresented: $isReportingFail,
             actions: {
+              Button("Confirm") { saveScore() }.keyboardShortcut(.defaultAction)
               Button("Cancel", role: .cancel, action: { isReportingFail = false })
-              Button("Confirm") { self.saveScore() }
             },
             message: { Text("Respect 🤝 You'll get tomorrow's puzzle!") }
           )
@@ -124,13 +137,13 @@ struct ScoreSubmissionView: View {
     let score = Score(context: CoreDataStack.context)
     score.answer = answerInput.lowercased()
     score.date = Date()
-    score.guessSummary = parseResult?.guessSummary
-    score.isHardMode = isHardMode
+    score.guessSummary = parseResult.guessSummary
+    score.isHardMode = parseResult.isHardMode
     score.maxGuesses = Int64(maxGuesses)
-    score.memo = parseResult?.gameMemo
-    score.numberOfGuesses = Int64(numGuesses)
+    score.memo = parseResult.gameMemo
+    score.numberOfGuesses = Int64(parseResult.numGuesses)
     score.submissionTimestamp = Date()
-    score.title = parseResult?.gameTitle ?? game.title
+    score.title = parseResult.gameTitle
 
     do {
       try CoreDataStack.saveContext()
