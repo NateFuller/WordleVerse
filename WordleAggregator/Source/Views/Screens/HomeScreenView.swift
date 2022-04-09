@@ -21,9 +21,7 @@ struct HomeScreenView: View {
               // Links to games
               ForEach(games.filter { $0.enabled }, id: \.self) { game in
                 let viewModel = GameRowViewModel(game: game)
-                Link(destination: viewModel.url) {
-                  GameRow(viewModel: viewModel)
-                }
+                GameRow(viewModel: viewModel)
               }
 
               // Submit Button

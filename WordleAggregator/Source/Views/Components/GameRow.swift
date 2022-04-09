@@ -9,26 +9,31 @@ import SwiftUI
 
 struct GameRow: View {
   var viewModel: GameRowViewModel
-  @Environment(\.colorScheme) var colorScheme
-  @Environment(\.openURL) var openURL
+
+  @State private var showURL = false
 
   var body: some View {
-    ZStack {
-      Text(viewModel.title)
-        .foregroundColor(Colors.Text.primary)
-        .fontWeight(.bold)
-        .font(.title2)
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 8))
+    Button(action: { showURL.toggle() }) {
+      ZStack {
+        Text(viewModel.title)
+          .foregroundColor(Colors.Text.primary)
+          .fontWeight(.bold)
+          .font(.title2)
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 8))
+      }
+      .homeScreenRow(idealHeight: 265, alignment: .bottomTrailing)
+      .background(Colors.Background.Gradient.bottomToTop)
+      .background(
+        Image("background.game")
+          .resizable()
+          .aspectRatio(contentMode: .fill)
+      )
+      .background(Colors.Background.secondary)
+      .cornerRadius(8)
     }
-    .homeScreenRow(idealHeight: 265, alignment: .bottomTrailing)
-    .background(Colors.Background.Gradient.bottomToTop)
-    .background(
-      Image("background.game")
-        .resizable()
-        .aspectRatio(contentMode: .fill)
-    )
-    .background(Colors.Background.secondary)
-    .cornerRadius(8)
+    .sheet(isPresented: $showURL) {
+      WebView(url: viewModel.url)
+    }
   }
 }
 
