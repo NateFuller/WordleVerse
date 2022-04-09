@@ -24,7 +24,7 @@ struct HistoryRow: View {
           viewModel.hardModeBadge
         }
         HStack {
-          viewModel.numGuessesText
+          viewModel.primaryText
             .foregroundColor(Colors.Text.primary)
             .font(.system(size: 48))
             .minimumScaleFactor(0.5)
@@ -43,7 +43,7 @@ struct HistoryRow: View {
     }
     .padding(8)
     .background(Colors.Background.Gradient.bottomToTop)
-    .background(Colors.Button.Primary.background)
+    .background(viewModel.backgroundColor)
     .cornerRadius(8)
     .onTapGesture {
       isAnswerHidden.toggle()
@@ -55,9 +55,6 @@ struct HistoryRow: View {
       Image(systemName: "asterisk")
         .font(.system(size: 8, weight: .bold))
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 4))
-      Text("HARD MODE")
-        .font(.system(size: 8))
-        .fontWeight(.bold)
     }
     .padding(8)
     .foregroundColor(Colors.Text.primary)
