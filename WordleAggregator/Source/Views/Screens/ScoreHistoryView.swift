@@ -38,7 +38,7 @@ struct ScoreHistoryView: View {
       })
       .listStyle(.plain)
     }
-    .navigationTitle("score history")
+    .navigationTitle("Score history")
   }
 
   func removeScore(at offsets: IndexSet) {

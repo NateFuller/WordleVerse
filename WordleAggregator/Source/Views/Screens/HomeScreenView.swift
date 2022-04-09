@@ -43,7 +43,7 @@ struct HomeScreenView: View {
           }
           Spacer()
         }
-        .navigationTitle("glhf 😊")
+        .navigationTitle("WordleVerse")
         .padding(16)
       }
     }

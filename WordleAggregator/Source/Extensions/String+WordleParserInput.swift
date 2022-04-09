@@ -26,7 +26,7 @@ extension String {
   🟩🟩🟩🟩🟩
   """
 
-  static let fail =
+  static let miss =
   """
   Wordle 294 X/6
 

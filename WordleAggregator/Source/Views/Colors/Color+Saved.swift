@@ -16,7 +16,6 @@ struct Colors {
 
     struct Secondary {
       static let background = Color("btn.secondary.background")
-      static let text = Color("btn.secondary.text")
     }
 
     struct Tertiary {

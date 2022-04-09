@@ -17,15 +17,13 @@ struct ScoreSubmissionView: View {
   @State private var errorMessage: String? { didSet { isErrorState = !errorMessage.isNilOrEmpty }}
   @State private var isAnswerInfoAlertVisible: Bool = false
   @State private var isErrorState: Bool = false
-  @State private var isReportingFail: Bool = false
+  @State private var isReportingMiss: Bool = false
+  @State private var sliderValue: Double
 
   private var isInputFilled: Bool { answerInput.length == game.answerLength }
   private var isSuccess: Bool { isInputFilled && withinMaxGuesses }
-  private var withinMaxGuesses: Bool { Int(parseResult.numGuesses) <= maxGuesses }
-
-  @State private var sliderValue: Double
-
   private var maxGuesses: Int { parseResult.maxGuesses }
+  private var withinMaxGuesses: Bool { parseResult.numGuesses <= maxGuesses }
 
   init(game: Game, parseResult: ParseResult) {
     self.game = game
@@ -43,12 +41,12 @@ struct ScoreSubmissionView: View {
               .frame(alignment: .leading)
             Button(action: { isAnswerInfoAlertVisible = true }) {
               Image(systemName: "info.circle")
-                .foregroundColor(Colors.Button.Secondary.text)
+                .foregroundColor(Colors.Text.link)
             }
             .alert(isPresented: $isAnswerInfoAlertVisible) {
               Alert(title: Text("What's the word?"),
-                    message: Text("Don’t know the word yet? I'm working on being able to update this later from the History screen 😉"),
-                    dismissButton: .cancel(Text("Siiick!")))
+                    message: Text("If you missed today's word, just leave this blank!"),
+                    dismissButton: .cancel(Text("Okay")))
             }
             Spacer()
           }
@@ -92,7 +90,7 @@ struct ScoreSubmissionView: View {
             if isSuccess {
               saveScore()
             } else {
-              isReportingFail = true
+              isReportingMiss = true
             }
           }) {
             Text(isSuccess ? "Submit" : "I didn't guess correctly 😕")
@@ -109,11 +107,11 @@ struct ScoreSubmissionView: View {
               .cornerRadius(8)
           }
           .alert(
-            "Reporting a fail?",
-            isPresented: $isReportingFail,
+            "Reporting a miss?",
+            isPresented: $isReportingMiss,
             actions: {
               Button("Confirm") { saveScore() }.keyboardShortcut(.defaultAction)
-              Button("Cancel", role: .cancel, action: { isReportingFail = false })
+              Button("Cancel", role: .cancel, action: { isReportingMiss = false })
             },
             message: { Text("Respect 🤝 You'll get tomorrow's puzzle!") }
           )
@@ -135,7 +133,7 @@ struct ScoreSubmissionView: View {
 
   private func saveScore() {
     let score = Score(context: CoreDataStack.context)
-    score.answer = answerInput.lowercased()
+    score.answer = isInputFilled ? answerInput.lowercased() : nil
     score.date = Date()
     score.guessSummary = parseResult.guessSummary
     score.isHardMode = parseResult.isHardMode
