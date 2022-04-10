@@ -12,5 +12,7 @@
 		<key>UIColorName</key>
 		<string>launchScreenBackground</string>
 	</dict>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<false/>
 </dict>
 </plist>

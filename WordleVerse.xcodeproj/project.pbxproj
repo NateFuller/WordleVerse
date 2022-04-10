@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F8168C6EE506B505028DFFF /* Pods_WordleVerse_WordleVerseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB80075D1A7AA10333509F /* Pods_WordleVerse_WordleVerseUITests.framework */; };
+		AEE75760D7CF9EDB3AE09B44 /* Pods_WordleVerseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC952F48BC687F0C1B5F72A5 /* Pods_WordleVerseTests.framework */; };
+		BEDAB4254631D5FDE3397BFD /* Pods_WordleVerse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E547D1CB6E3DF7F1B10B8C /* Pods_WordleVerse.framework */; };
 		CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB073BD827CBE1750016F04F /* GameRowViewModel.swift */; };
 		CB0F311227F9DD1D00A66B00 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0F311127F9DD1D00A66B00 /* TestData.swift */; };
 		CB0F311427F9DD4200A66B00 /* TestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0F311327F9DD4200A66B00 /* TestScores.swift */; };
 		CB18720627E1820000BC81C4 /* TextFieldLimitModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */; };
 		CB18720927E199E600BC81C4 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18720827E199E600BC81C4 /* Score.swift */; };
+		CB360BBB280320EA00F430DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB360BBA280320EA00F430DD /* GoogleService-Info.plist */; };
 		CB4A3B3F27E97C5400DB32A4 /* WordleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A3B3E27E97C5400DB32A4 /* WordleParser.swift */; };
 		CB4A3B4127E97D2600DB32A4 /* WordleParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A3B4027E97D2600DB32A4 /* WordleParserTests.swift */; };
 		CB4A3B4627E99EF700DB32A4 /* WordleResultInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A3B4527E99EF700DB32A4 /* WordleResultInputField.swift */; };
@@ -70,11 +74,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07F12599D1B09D76D250C5E4 /* Pods-WordleVerse-WordleVerseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse-WordleVerseUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		42CB80075D1A7AA10333509F /* Pods_WordleVerse_WordleVerseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleVerse_WordleVerseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61BE1B8A65B412361138B1D6 /* Pods-WordleVerseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerseTests.debug.xcconfig"; path = "Target Support Files/Pods-WordleVerseTests/Pods-WordleVerseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8562B73341A010D641ABF33A /* Pods-WordleVerse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse.release.xcconfig"; path = "Target Support Files/Pods-WordleVerse/Pods-WordleVerse.release.xcconfig"; sourceTree = "<group>"; };
+		934B4EF760566C480CCD9B3C /* Pods-WordleVerse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse.debug.xcconfig"; path = "Target Support Files/Pods-WordleVerse/Pods-WordleVerse.debug.xcconfig"; sourceTree = "<group>"; };
+		BC952F48BC687F0C1B5F72A5 /* Pods_WordleVerseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleVerseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55A91B6A5268D92DC3AF1FA /* Pods-WordleVerseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerseTests.release.xcconfig"; path = "Target Support Files/Pods-WordleVerseTests/Pods-WordleVerseTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB073BD827CBE1750016F04F /* GameRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRowViewModel.swift; sourceTree = "<group>"; };
 		CB0F311127F9DD1D00A66B00 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		CB0F311327F9DD4200A66B00 /* TestScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScores.swift; sourceTree = "<group>"; };
 		CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitModifier.swift; sourceTree = "<group>"; };
 		CB18720827E199E600BC81C4 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		CB360BBA280320EA00F430DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB4A3B3E27E97C5400DB32A4 /* WordleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleParser.swift; sourceTree = "<group>"; };
 		CB4A3B4027E97D2600DB32A4 /* WordleParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleParserTests.swift; sourceTree = "<group>"; };
 		CB4A3B4327E980A800DB32A4 /* String+WordleParserInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WordleParserInput.swift"; sourceTree = "<group>"; };
@@ -117,6 +129,8 @@
 		CBEDBA4A27D332450007C16D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CBEDBA5127D343430007C16D /* FlexibleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleButton.swift; sourceTree = "<group>"; };
 		CBEDBA5327D356240007C16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E0E547D1CB6E3DF7F1B10B8C /* Pods_WordleVerse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleVerse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA2F329079E89F1F852B655 /* Pods-WordleVerse-WordleVerseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse-WordleVerseUITests.release.xcconfig"; path = "Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDAB4254631D5FDE3397BFD /* Pods_WordleVerse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE75760D7CF9EDB3AE09B44 /* Pods_WordleVerseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,12 +154,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8168C6EE506B505028DFFF /* Pods_WordleVerse_WordleVerseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BDE3B7928D5B4126AF1D715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				934B4EF760566C480CCD9B3C /* Pods-WordleVerse.debug.xcconfig */,
+				8562B73341A010D641ABF33A /* Pods-WordleVerse.release.xcconfig */,
+				07F12599D1B09D76D250C5E4 /* Pods-WordleVerse-WordleVerseUITests.debug.xcconfig */,
+				FBA2F329079E89F1F852B655 /* Pods-WordleVerse-WordleVerseUITests.release.xcconfig */,
+				61BE1B8A65B412361138B1D6 /* Pods-WordleVerseTests.debug.xcconfig */,
+				C55A91B6A5268D92DC3AF1FA /* Pods-WordleVerseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4C61A8B3B5D21C14BF641751 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0E547D1CB6E3DF7F1B10B8C /* Pods_WordleVerse.framework */,
+				42CB80075D1A7AA10333509F /* Pods_WordleVerse_WordleVerseUITests.framework */,
+				BC952F48BC687F0C1B5F72A5 /* Pods_WordleVerseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB0F311027F9DD1500A66B00 /* Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +353,8 @@
 				CBCCA3B127C94857007B2643 /* WordleVerseTests */,
 				CBCCA3BB27C94857007B2643 /* WordleVerseUITests */,
 				CBCCA39F27C94855007B2643 /* Products */,
+				0BDE3B7928D5B4126AF1D715 /* Pods */,
+				4C61A8B3B5D21C14BF641751 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -329,6 +371,7 @@
 		CBCCA3A027C94855007B2643 /* WordleVerse */ = {
 			isa = PBXGroup;
 			children = (
+				CB360BBA280320EA00F430DD /* GoogleService-Info.plist */,
 				CBEDBA5327D356240007C16D /* Info.plist */,
 				CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */,
 				CB69FB7127C94A120080E6D0 /* Source */,
@@ -388,9 +431,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBCCA3C227C94857007B2643 /* Build configuration list for PBXNativeTarget "WordleVerse" */;
 			buildPhases = (
+				BCC1A6936BBCEE1BA4038607 /* [CP] Check Pods Manifest.lock */,
 				CBCCA39A27C94855007B2643 /* Sources */,
 				CBCCA39B27C94855007B2643 /* Frameworks */,
 				CBCCA39C27C94855007B2643 /* Resources */,
+				12A81CA3BA853A05175B46BE /* [CP] Embed Pods Frameworks */,
+				CB7CA0E52803243C009CCF5C /* Run Script - Upload Debug Symbols to Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -405,6 +451,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBCCA3C527C94857007B2643 /* Build configuration list for PBXNativeTarget "WordleVerseTests" */;
 			buildPhases = (
+				DA48AE19E852F0D96F8D1A10 /* [CP] Check Pods Manifest.lock */,
 				CBCCA3AA27C94857007B2643 /* Sources */,
 				CBCCA3AB27C94857007B2643 /* Frameworks */,
 				CBCCA3AC27C94857007B2643 /* Resources */,
@@ -423,9 +470,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBCCA3C827C94857007B2643 /* Build configuration list for PBXNativeTarget "WordleVerseUITests" */;
 			buildPhases = (
+				ACD4AF79A47B446F6CB87D2D /* [CP] Check Pods Manifest.lock */,
 				CBCCA3B427C94857007B2643 /* Sources */,
 				CBCCA3B527C94857007B2643 /* Frameworks */,
 				CBCCA3B627C94857007B2643 /* Resources */,
+				B7BF36D89796871520084322 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -487,6 +536,7 @@
 			files = (
 				CBEDBA4B27D332450007C16D /* Colors.xcassets in Resources */,
 				CBCCA3A927C94856007B2643 /* Preview Assets.xcassets in Resources */,
+				CB360BBB280320EA00F430DD /* GoogleService-Info.plist in Resources */,
 				CB90129F280316EE002F6B8D /* en.xcloc in Resources */,
 				CBCCA3A627C94856007B2643 /* Assets.xcassets in Resources */,
 			);
@@ -507,6 +557,127 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12A81CA3BA853A05175B46BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse/Pods-WordleVerse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse/Pods-WordleVerse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordleVerse/Pods-WordleVerse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACD4AF79A47B446F6CB87D2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordleVerse-WordleVerseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7BF36D89796871520084322 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCC1A6936BBCEE1BA4038607 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordleVerse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB7CA0E52803243C009CCF5C /* Run Script - Upload Debug Symbols to Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Upload Debug Symbols to Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		DA48AE19E852F0D96F8D1A10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordleVerseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBCCA39A27C94855007B2643 /* Sources */ = {
@@ -705,11 +876,13 @@
 		};
 		CBCCA3C327C94857007B2643 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 934B4EF760566C480CCD9B3C /* Pods-WordleVerse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"WordleVerse/Preview Content\"";
 				DEVELOPMENT_TEAM = FB4GZPFLL6;
 				ENABLE_PREVIEWS = YES;
@@ -735,6 +908,7 @@
 		};
 		CBCCA3C427C94857007B2643 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8562B73341A010D641ABF33A /* Pods-WordleVerse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -765,6 +939,7 @@
 		};
 		CBCCA3C627C94857007B2643 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61BE1B8A65B412361138B1D6 /* Pods-WordleVerseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -790,6 +965,7 @@
 		};
 		CBCCA3C727C94857007B2643 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C55A91B6A5268D92DC3AF1FA /* Pods-WordleVerseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -815,6 +991,7 @@
 		};
 		CBCCA3C927C94857007B2643 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F12599D1B09D76D250C5E4 /* Pods-WordleVerse-WordleVerseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -838,6 +1015,7 @@
 		};
 		CBCCA3CA27C94857007B2643 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA2F329079E89F1F852B655 /* Pods-WordleVerse-WordleVerseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

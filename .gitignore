@@ -11,7 +11,7 @@
 Pods/
 
 ### Firebase ###
-# *GoogleService-Info.plist
+*GoogleService-Info.plist
 
 ### Xcode ###
 ## User settings
