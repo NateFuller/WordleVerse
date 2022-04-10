@@ -70,7 +70,10 @@ struct PasteResultsView: View {
       }
     }
     .navigationTitle("Submit your score 📋")
-    .onAppear { validResultParsed = false }
+    .onAppear {
+      FirebaseManager.logScreen(.pasteResults)
+      validResultParsed = false
+    }
   }
 }
 

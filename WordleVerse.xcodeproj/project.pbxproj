@@ -34,6 +34,8 @@
 		CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */; };
 		CB78262627F6D3C900D114D8 /* ParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262527F6D3C900D114D8 /* ParseResult.swift */; };
 		CB78262727F6D9D300D114D8 /* String+WordleParserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A3B4327E980A800DB32A4 /* String+WordleParserInput.swift */; };
+		CB7CA0E82803310D009CCF5C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CA0E72803310D009CCF5C /* FirebaseManager.swift */; };
+		CB7CA0EA28033227009CCF5C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CA0E928033227009CCF5C /* Screen.swift */; };
 		CB89B5A827E03AE700FB4650 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89B5A727E03AE700FB4650 /* Background.swift */; };
 		CB90129F280316EE002F6B8D /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = CB90129E280316EE002F6B8D /* en.xcloc */; };
 		CB9012A12803189A002F6B8D /* GameWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9012A02803189A002F6B8D /* GameWebView.swift */; };
@@ -105,6 +107,8 @@
 		CB7733BE27F9197B00DB9D9F /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
 		CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadowModifier.swift; sourceTree = "<group>"; };
 		CB78262527F6D3C900D114D8 /* ParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResult.swift; sourceTree = "<group>"; };
+		CB7CA0E72803310D009CCF5C /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		CB7CA0E928033227009CCF5C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		CB89B5A727E03AE700FB4650 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		CB90129E280316EE002F6B8D /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		CB9012A02803189A002F6B8D /* GameWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameWebView.swift; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				CBCCA3A127C94855007B2643 /* WordleVerseApp.swift */,
+				CB7CA0E628032FBC009CCF5C /* Analytics */,
 				CBAE44EC27D53F5900F60C04 /* Data */,
 				CB7733B227F8C0A900DB9D9F /* Error */,
 				CB4A51CA27DAE68700AB5F0D /* Extensions */,
@@ -314,6 +319,15 @@
 				CB7733B327F8C0C000DB9D9F /* TestError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		CB7CA0E628032FBC009CCF5C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				CB7CA0E72803310D009CCF5C /* FirebaseManager.swift */,
+				CB7CA0E928033227009CCF5C /* Screen.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		CB90129D280316EE002F6B8D /* WordleVerse Localizations */ = {
@@ -684,6 +698,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7CA0EA28033227009CCF5C /* Screen.swift in Sources */,
 				CB4A3B4627E99EF700DB32A4 /* WordleResultInputField.swift in Sources */,
 				CB18720927E199E600BC81C4 /* Score.swift in Sources */,
 				CB7733BB27F900F100DB9D9F /* View+HomeScreenRow.swift in Sources */,
@@ -696,6 +711,7 @@
 				CB7733BF27F9197B00DB9D9F /* Date+Formatting.swift in Sources */,
 				CB7733BD27F911B400DB9D9F /* HistoryRow.swift in Sources */,
 				CBB52B76280206E900B0180A /* WebView.swift in Sources */,
+				CB7CA0E82803310D009CCF5C /* FirebaseManager.swift in Sources */,
 				CBCCA3A427C94855007B2643 /* HomeScreenView.swift in Sources */,
 				CB4A3B3F27E97C5400DB32A4 /* WordleParser.swift in Sources */,
 				CBD2FE5F27D2B59200631C26 /* Color+Saved.swift in Sources */,

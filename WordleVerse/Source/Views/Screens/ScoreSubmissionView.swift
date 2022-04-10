@@ -129,6 +129,9 @@ struct ScoreSubmissionView: View {
       }
     }
     .navigationTitle("today's \(game.title)")
+    .onAppear() {
+      FirebaseManager.logScreen(.scoreSubmission)
+    }
   }
 
   private func saveScore() {

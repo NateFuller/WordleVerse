@@ -19,6 +19,9 @@ struct GameWebView: View {
     }
     .navigationBarTitle("Play \(game.title)")
     .navigationBarHidden(true)
+    .onAppear() {
+      FirebaseManager.logScreen(.game(title: game.title, url: game.url))
+    }
   }
 }
 

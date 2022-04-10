@@ -39,6 +39,9 @@ struct ScoreHistoryView: View {
       .listStyle(.plain)
     }
     .navigationTitle("Score history")
+    .onAppear() {
+      FirebaseManager.logScreen(.scoreHistory)
+    }
   }
 
   func removeScore(at offsets: IndexSet) {

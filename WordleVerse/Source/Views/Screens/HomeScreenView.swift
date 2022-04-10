@@ -49,6 +49,9 @@ struct HomeScreenView: View {
     }
     .navigationViewStyle(.stack)
     .environment(\.rootPresentationMode, self.$isPresented)
+    .onAppear() {
+      FirebaseManager.logScreen(.home)
+    }
   }
 }
 
