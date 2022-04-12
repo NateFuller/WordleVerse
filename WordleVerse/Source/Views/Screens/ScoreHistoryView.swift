@@ -40,7 +40,7 @@ struct ScoreHistoryView: View {
     }
     .navigationTitle("Score history")
     .onAppear() {
-      FirebaseManager.logScreen(.scoreHistory)
+      AnalyticsManager.logger.logScreen(.scoreHistory)
     }
   }
 
@@ -52,6 +52,7 @@ struct ScoreHistoryView: View {
 
     do {
       try CoreDataStack.saveContext()
+      AnalyticsManager.logger.logEvent(name: .historyRowDeleted)
     } catch {
       CoreDataStack.context.rollback()
 
@@ -60,6 +61,9 @@ struct ScoreHistoryView: View {
 #else
       errorMessage = "There was a problem saving your score. The developer has been notified of this issue ✍️"
 #endif
+
+      AnalyticsManager.logger.logEvent(name: .historyRowDeletionError,
+                               parameters: [Event.ParameterKey.errorMessage: error.localizedDescription])
     }
   }
 }

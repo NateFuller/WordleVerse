@@ -8,10 +8,17 @@
 import Foundation
 import FirebaseAnalytics
 
-class FirebaseManager {
+class FirebaseManager: AnalyticsLoggable {
   static func logScreen(_ screen: Screen) {
+    var parameters = screen.additionalParameters ?? [:]
+    parameters[AnalyticsParameterScreenName] = screen.name
+    parameters[AnalyticsParameterScreenClass] = screen.`class`
+
     Analytics.logEvent(AnalyticsEventScreenView,
-                       parameters: [AnalyticsParameterScreenName: screen.name,
-                                   AnalyticsParameterScreenClass: screen.class])
+                       parameters: parameters)
+  }
+
+  static func logEvent(name: Event.Name, parameters: [String: Any]? = nil) {
+    Analytics.logEvent(name.rawValue, parameters: parameters)
   }
 }

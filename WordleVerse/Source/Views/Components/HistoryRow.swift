@@ -46,6 +46,7 @@ struct HistoryRow: View {
     .background(viewModel.backgroundColor)
     .cornerRadius(8)
     .onTapGesture {
+      AnalyticsManager.logger.logEvent(name: .historyRowTapped)
       isAnswerHidden.toggle()
     }
   }

@@ -32,7 +32,7 @@ struct GameRow: View {
       .cornerRadius(8)
     }
     .sheet(isPresented: $showURL) {
-      WebView(url: viewModel.url)
+      GameWebView(game: viewModel)
     }
   }
 }

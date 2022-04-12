@@ -16,7 +16,13 @@ struct PasteResultsView: View {
   @State private var validResultParsed: Bool = false
   @State private var isErrorState: Bool = false
   @State private var errorMessage: String? {
-    didSet { isErrorState = !errorMessage.isNilOrEmpty }
+    didSet {
+      isErrorState = !errorMessage.isNilOrEmpty
+      if let errorMessage = errorMessage, !errorMessage.isEmpty {
+        AnalyticsManager.logger.logEvent(name: .pasteResultsError,
+                                         parameters: [Event.ParameterKey.errorMessage: errorMessage])
+      }
+    }
   }
 
   var body: some View {
@@ -38,6 +44,7 @@ struct PasteResultsView: View {
           do {
             currentParseResult = try WordleParser.parse(resultText: inputText)
             validResultParsed = true
+            AnalyticsManager.logger.logEvent(name: .pasteResultsSuccess)
           } catch {
             errorMessage = error.localizedDescription
           }
@@ -57,6 +64,7 @@ struct PasteResultsView: View {
         })
 
         Button(action: {
+          AnalyticsManager.logger.logEvent(name: .pasteResultsSkipped)
           currentParseResult = ParseResult.emptyWordle
           validResultParsed = true
         }) {
@@ -71,7 +79,7 @@ struct PasteResultsView: View {
     }
     .navigationTitle("Submit your score 📋")
     .onAppear {
-      FirebaseManager.logScreen(.pasteResults)
+      AnalyticsManager.logger.logScreen(.pasteResults)
       validResultParsed = false
     }
   }

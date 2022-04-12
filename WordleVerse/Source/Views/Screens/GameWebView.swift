@@ -8,27 +8,20 @@
 import SwiftUI
 
 struct GameWebView: View {
-  var game: Game
+  var game: GameRowViewModel
 
   var body: some View {
-    Background {
-      VStack {
-        WebView(url: URL(string: game.url)!)
-        Spacer()
+    WebView(url: game.url)
+      .onAppear() {
+        AnalyticsManager.logger.logScreen(.game(title: game.title, url: game.url.absoluteString))
       }
-    }
-    .navigationBarTitle("Play \(game.title)")
-    .navigationBarHidden(true)
-    .onAppear() {
-      FirebaseManager.logScreen(.game(title: game.title, url: game.url))
-    }
   }
 }
 
 struct GameWebView_Previews: PreviewProvider {
   static var previews: some View {
 
-      GameWebView(game: Game.Defaults.wordle)
+    GameWebView(game: GameRowViewModel(game: Game.Defaults.wordle))
         .preferredColorScheme(.dark)
     }
 

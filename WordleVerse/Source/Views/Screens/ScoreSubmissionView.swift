@@ -39,7 +39,10 @@ struct ScoreSubmissionView: View {
             Text("what was today's word?")
               .font(.title3).fontWeight(.bold)
               .frame(alignment: .leading)
-            Button(action: { isAnswerInfoAlertVisible = true }) {
+            Button(action: {
+              AnalyticsManager.logger.logEvent(name: .scoreSubmissionInfoDisclosureTapped)
+              isAnswerInfoAlertVisible = true
+            }) {
               Image(systemName: "info.circle")
                 .foregroundColor(Colors.Text.link)
             }
@@ -65,6 +68,7 @@ struct ScoreSubmissionView: View {
             set: {
               sliderValue = $0
               parseResult.numGuesses = Int($0)
+              AnalyticsManager.logger.logEvent(name: .scoreSubmissionGuessesUpdated)
             }
           ), in: 1...(Double(maxGuesses) + 1), step: 1)
             .tint(withinMaxGuesses ? Colors.Button.Primary.background : Colors.Background.warning)
@@ -85,6 +89,9 @@ struct ScoreSubmissionView: View {
           .toggleStyle(.button)
           .tint(Colors.Button.Secondary.background)
           .cornerRadius(8)
+          .onChange(of: parseResult.isHardMode) { _ in
+            AnalyticsManager.logger.logEvent(name: .scoreSubmissionHardModeUpdated)
+          }
 
           Button(action: {
             if isSuccess {
@@ -130,7 +137,7 @@ struct ScoreSubmissionView: View {
     }
     .navigationTitle("today's \(game.title)")
     .onAppear() {
-      FirebaseManager.logScreen(.scoreSubmission)
+      AnalyticsManager.logger.logScreen(.scoreSubmission)
     }
   }
 
@@ -148,6 +155,7 @@ struct ScoreSubmissionView: View {
 
     do {
       try CoreDataStack.saveContext()
+      AnalyticsManager.logger.logEvent(name: .scoreSubmitted)
       rootPresentationMode.wrappedValue.dismiss()
     } catch {
       #if DEBUG
