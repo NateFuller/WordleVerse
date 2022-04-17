@@ -45,6 +45,7 @@
 		CBAE44EB27D53AD400F60C04 /* WordleVerse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44E927D53AD400F60C04 /* WordleVerse.xcdatamodeld */; };
 		CBAE44EE27D53F6900F60C04 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44ED27D53F6900F60C04 /* DataController.swift */; };
 		CBAE44F127D5581700F60C04 /* ScoreHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */; };
+		CBAF7BA72805317C00F67996 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CBAF7BA62805317C00F67996 /* Podfile */; };
 		CBB52B7427FBE24A00B0180A /* ScoreHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB52B7327FBE24A00B0180A /* ScoreHistoryViewModel.swift */; };
 		CBB52B76280206E900B0180A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB52B75280206E900B0180A /* WebView.swift */; };
 		CBCCA3A227C94855007B2643 /* WordleVerseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3A127C94855007B2643 /* WordleVerseApp.swift */; };
@@ -121,6 +122,7 @@
 		CBAE44EA27D53AD400F60C04 /* WordleVerse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordleVerse.xcdatamodel; sourceTree = "<group>"; };
 		CBAE44ED27D53F6900F60C04 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CBAE44F027D5581700F60C04 /* ScoreHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryView.swift; sourceTree = "<group>"; };
+		CBAF7BA62805317C00F67996 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		CBB52B7327FBE24A00B0180A /* ScoreHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryViewModel.swift; sourceTree = "<group>"; };
 		CBB52B75280206E900B0180A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CBCCA39E27C94855007B2643 /* WordleVerse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordleVerse.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -375,6 +377,7 @@
 				CBCCA3A027C94855007B2643 /* WordleVerse */,
 				CBCCA3B127C94857007B2643 /* WordleVerseTests */,
 				CBCCA3BB27C94857007B2643 /* WordleVerseUITests */,
+				CBAF7BA62805317C00F67996 /* Podfile */,
 				CBCCA39F27C94855007B2643 /* Products */,
 				0BDE3B7928D5B4126AF1D715 /* Pods */,
 				4C61A8B3B5D21C14BF641751 /* Frameworks */,
@@ -455,6 +458,7 @@
 			buildConfigurationList = CBCCA3C227C94857007B2643 /* Build configuration list for PBXNativeTarget "WordleVerse" */;
 			buildPhases = (
 				BCC1A6936BBCEE1BA4038607 /* [CP] Check Pods Manifest.lock */,
+				CBE8C053280537FB00664CAB /* Run Script - Populate Info.plist with Environment Variables */,
 				CBCCA39A27C94855007B2643 /* Sources */,
 				CBCCA39B27C94855007B2643 /* Frameworks */,
 				CBCCA39C27C94855007B2643 /* Resources */,
@@ -557,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAF7BA72805317C00F67996 /* Podfile in Resources */,
 				CBEDBA4B27D332450007C16D /* Colors.xcassets in Resources */,
 				CBCCA3A927C94856007B2643 /* Preview Assets.xcassets in Resources */,
 				CB360BBB280320EA00F430DD /* GoogleService-Info.plist in Resources */,
@@ -677,6 +682,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		CBE8C053280537FB00664CAB /* Run Script - Populate Info.plist with Environment Variables */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Populate Info.plist with Environment Variables";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsource ./Scripts/add_env_keys.sh\nxcrun --sdk macosx swiftc Scripts/ReadEnvironmentVariables.swift\n  -o ReadEnvironmentVariables\n./ReadEnvironmentVariables\n";
 		};
 		DA48AE19E852F0D96F8D1A10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

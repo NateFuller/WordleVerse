@@ -8,6 +8,7 @@ target 'WordleVerse' do
   # Pods for WordleVerse
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'WordleVerseTests' do
     inherit! :search_paths
