@@ -1,4 +1,5 @@
 Scripts/add_env_keys.sh 
+Scripts/exe/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,firebase,cocoapods
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode,firebase,cocoapods

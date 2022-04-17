@@ -699,7 +699,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsource ./Scripts/add_env_keys.sh\nxcrun --sdk macosx swiftc Scripts/ReadEnvironmentVariables.swift\n  -o ReadEnvironmentVariables\n./ReadEnvironmentVariables\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n source ./Scripts/add_env_keys.sh\n xcrun --sdk macosx swiftc ./Scripts/ReadEnvironmentVariables.swift -o ./Scripts/exe/ReadEnvironmentVariables\n ./Scripts/exe/ReadEnvironmentVariables\n";
 		};
 		DA48AE19E852F0D96F8D1A10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
