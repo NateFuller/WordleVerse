@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeScreenView: View {
-  @State var isPresented: Bool = false
+  @State var presentingScoreSubmission: Bool = false
+  @State var presentingHistory: Bool = false
   let games = Game.Defaults.all
 
   var body: some View {
@@ -27,7 +28,7 @@ struct HomeScreenView: View {
               // Submit Button
               NavigationLink(
                 destination: PasteResultsView(),
-                isActive: $isPresented
+                isActive: $presentingScoreSubmission
               ) {
                 Text("Submit Results")
               }
@@ -35,7 +36,8 @@ struct HomeScreenView: View {
               .buttonStyle(FlexibleButton(color: Colors.Button.Primary.background))
 
               // History Button
-              NavigationLink(destination: ScoreHistoryView()) {
+              NavigationLink(destination: ScoreHistoryView(),
+                             isActive: $presentingHistory) {
                 Text("History")
               }
               .buttonStyle(FlexibleButton(color: Colors.Button.Secondary.background))
@@ -48,7 +50,8 @@ struct HomeScreenView: View {
       }
     }
     .navigationViewStyle(.stack)
-    .environment(\.rootPresentationMode, self.$isPresented)
+    .environment(\.didSubmitScore, self.$presentingHistory)
+    .environment(\.rootPresentationMode, self.$presentingScoreSubmission)
     .onAppear() {
       AnalyticsManager.logger.logScreen(.home)
     }
