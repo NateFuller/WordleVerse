@@ -455,7 +455,6 @@
 			buildConfigurationList = CBCCA3C227C94857007B2643 /* Build configuration list for PBXNativeTarget "WordleVerse" */;
 			buildPhases = (
 				BCC1A6936BBCEE1BA4038607 /* [CP] Check Pods Manifest.lock */,
-				CBE8C053280537FB00664CAB /* Run Script - Populate Info.plist with Environment Variables */,
 				CBCCA39A27C94855007B2643 /* Sources */,
 				CBCCA39B27C94855007B2643 /* Frameworks */,
 				CBCCA39C27C94855007B2643 /* Resources */,
@@ -679,24 +678,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		CBE8C053280537FB00664CAB /* Run Script - Populate Info.plist with Environment Variables */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script - Populate Info.plist with Environment Variables";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n source ./Scripts/add_env_keys.sh\n xcrun --sdk macosx swiftc ./Scripts/ReadEnvironmentVariables.swift -o ./Scripts/exe/ReadEnvironmentVariables\n ./Scripts/exe/ReadEnvironmentVariables\n";
 		};
 		DA48AE19E852F0D96F8D1A10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

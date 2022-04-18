@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# pod install
+pod install
 
 # Adds necessary environment variables (such as Ad Mob App ID) to path 
 source ./Scripts/add_env_keys.sh
