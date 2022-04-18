@@ -28,7 +28,6 @@
 		CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B327F8C0C000DB9D9F /* TestError.swift */; };
 		CB7733B727F8F3B800DB9D9F /* EnvironmentValues+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */; };
 		CB7733B927F900BB00DB9D9F /* HomeScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */; };
-		CB7733BB27F900F100DB9D9F /* View+HomeScreenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */; };
 		CB7733BD27F911B400DB9D9F /* HistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733BC27F911B400DB9D9F /* HistoryRow.swift */; };
 		CB7733BF27F9197B00DB9D9F /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7733BE27F9197B00DB9D9F /* Date+Formatting.swift */; };
 		CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */; };
@@ -106,7 +105,6 @@
 		CB7733B327F8C0C000DB9D9F /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		CB7733B627F8F3B800DB9D9F /* EnvironmentValues+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Routing.swift"; sourceTree = "<group>"; };
 		CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenRow.swift; sourceTree = "<group>"; };
-		CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HomeScreenRow.swift"; sourceTree = "<group>"; };
 		CB7733BC27F911B400DB9D9F /* HistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRow.swift; sourceTree = "<group>"; };
 		CB7733BE27F9197B00DB9D9F /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
 		CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerShadowModifier.swift; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 				CB7733B827F900BB00DB9D9F /* HomeScreenRow.swift */,
 				CB78262327F6C39600D114D8 /* InnerShadowModifier.swift */,
 				CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */,
-				CB7733BA27F900F100DB9D9F /* View+HomeScreenRow.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -733,7 +730,6 @@
 				CB7CA0EA28033227009CCF5C /* Screen.swift in Sources */,
 				CB4A3B4627E99EF700DB32A4 /* WordleResultInputField.swift in Sources */,
 				CB18720927E199E600BC81C4 /* Score.swift in Sources */,
-				CB7733BB27F900F100DB9D9F /* View+HomeScreenRow.swift in Sources */,
 				CBEDBA5227D343430007C16D /* FlexibleButton.swift in Sources */,
 				CB18720627E1820000BC81C4 /* TextFieldLimitModifier.swift in Sources */,
 				CB7CA0EC28034311009CCF5C /* Event.swift in Sources */,

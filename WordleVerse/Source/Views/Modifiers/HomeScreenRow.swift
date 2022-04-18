@@ -16,3 +16,9 @@ struct HomeScreenRow: ViewModifier {
       .frame(maxWidth: .infinity, idealHeight: idealHeight, maxHeight: .infinity, alignment: alignment)
   }
 }
+
+extension View {
+  func homeScreenRow(idealHeight: CGFloat = 93, alignment: Alignment = .center) -> some View {
+    modifier(HomeScreenRow(idealHeight: idealHeight, alignment: alignment))
+  }
+}

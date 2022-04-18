@@ -22,6 +22,12 @@ struct InnerShadowModifier: ViewModifier {
   }
 }
 
+extension View {
+  func innerShadow(radius: CGFloat = 15) -> some View {
+    modifier(InnerShadowModifier(radius: radius))
+  }
+}
+
 struct InnerShadowModifier_Previews: PreviewProvider {
   static var previews: some View {
     Rectangle()

@@ -33,9 +33,8 @@ struct WordleResultInputField: View {
     }
     .background(Colors.Background.primary)
     .cornerRadius(15)
-    .modifier(InnerShadowModifier(radius: 15))
+    .innerShadow()
     .padding()
-
   }
 }
 
