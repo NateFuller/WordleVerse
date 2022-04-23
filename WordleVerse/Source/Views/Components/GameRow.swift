@@ -31,6 +31,7 @@ struct GameRow: View {
       .background(Colors.Background.secondary)
       .cornerRadius(8)
     }
+    .disabled(viewModel.enabled)
     .sheet(isPresented: $showURL) {
       GameWebView(game: viewModel)
     }

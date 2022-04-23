@@ -11,8 +11,10 @@ import SwiftUI
 struct GameRowViewModel {
   var title: String!
   var url: URL!
+  var enabled: Bool
 
   init(game: Game) {
+    enabled = game.enabled
     title = game.title
     url = URL(string: game.url)
   }
