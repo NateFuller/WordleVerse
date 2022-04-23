@@ -51,7 +51,7 @@ extension Game {
     static let wordle2 = Game(title: "Wordle2",
                               enabled: false,
                               maxGuesses: 6,
-                              url: "https://www.wordle2.in/",
+                              url: "https://www.wordhurdle.in/",
                               numberOfAnswers: 1,
                               answerLength: 6,
                               resetHour: 0,
