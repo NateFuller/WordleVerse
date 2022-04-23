@@ -50,6 +50,7 @@ struct HomeScreenView: View {
         .padding(16)
       }
     }
+    .accentColor(Colors.Text.link)
     .navigationViewStyle(.stack)
     .environment(\.didSubmitScore, $historyIsRoot)
     .environment(\.presentHistory, $presentingHistory)
