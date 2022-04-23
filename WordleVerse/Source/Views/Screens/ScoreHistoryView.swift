@@ -10,6 +10,8 @@ import CoreData
 
 struct ScoreHistoryView: View {
 
+  @Environment(\.didSubmitScore) private var presentingScoreSubmission: Binding<Bool>
+
   @FetchRequest(
     entity: Score.entity(),
     sortDescriptors: [
@@ -37,12 +39,26 @@ struct ScoreHistoryView: View {
         Text(errorMessage ?? "")
       })
       .listStyle(.plain)
+      .background(
+        NavigationLink(destination: PasteResultsView(), isActive: presentingScoreSubmission) {
+          EmptyView()
+        }
+      )
     }
     .navigationTitle("Score history")
+    .toolbar(content: {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button("Submit new score") {
+          presentingScoreSubmission.wrappedValue = true
+        }
+      }
+    })
     .onAppear() {
       AnalyticsManager.logger.logScreen(.scoreHistory)
     }
   }
+
+  // MARK: - CoreData helpers
 
   func removeScore(at offsets: IndexSet) {
     for index in offsets {
@@ -67,6 +83,8 @@ struct ScoreHistoryView: View {
     }
   }
 }
+
+// MARK: - Previews
 
 struct ScoreHistoryView_Previews: PreviewProvider {
   static var previews: some View {

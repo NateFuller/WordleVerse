@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+  @State var historyIsRoot: Bool = false
   @State var presentingScoreSubmission: Bool = false
   @State var presentingHistory: Bool = false
   let games = Game.Defaults.all
@@ -50,8 +51,9 @@ struct HomeScreenView: View {
       }
     }
     .navigationViewStyle(.stack)
-    .environment(\.didSubmitScore, self.$presentingHistory)
-    .environment(\.rootPresentationMode, self.$presentingScoreSubmission)
+    .environment(\.didSubmitScore, $historyIsRoot)
+    .environment(\.presentHistory, $presentingHistory)
+    .environment(\.rootPresentationMode, $presentingScoreSubmission)
     .onAppear() {
       AnalyticsManager.logger.logScreen(.home)
     }

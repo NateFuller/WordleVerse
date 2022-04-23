@@ -11,7 +11,8 @@ struct ScoreSubmissionView: View {
   var game: Game
   @State var parseResult: ParseResult
 
-  @Environment(\.didSubmitScore) private var didSubmitScore: Binding<Bool>
+  @Environment(\.didSubmitScore) private var presentingFromHistory: Binding<Bool>
+  @Environment(\.presentHistory) private var presentHistory
   @Environment(\.rootPresentationMode) private var rootPresentationMode: Binding<RootPresentationMode>
 
   @State private var answerInput: String = ""
@@ -157,8 +158,12 @@ struct ScoreSubmissionView: View {
     do {
       try CoreDataStack.saveContext()
       AnalyticsManager.logger.logEvent(name: .scoreSubmitted)
-      rootPresentationMode.wrappedValue.dismiss()
-      didSubmitScore.wrappedValue = true
+      if presentingFromHistory.wrappedValue {
+        presentingFromHistory.wrappedValue.dismiss()
+      } else {
+        rootPresentationMode.wrappedValue.dismiss()
+        presentHistory.wrappedValue.toggle()
+      }
     } catch {
       #if DEBUG
       errorMessage = error.localizedDescription
