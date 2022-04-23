@@ -77,7 +77,7 @@ struct PasteResultsView: View {
         Spacer()
       }
     }
-    .navigationTitle("Submit your score 📋")
+    .navigationTitle("Input Results")
     .onAppear {
       AnalyticsManager.logger.logScreen(.pasteResults)
       validResultParsed = false

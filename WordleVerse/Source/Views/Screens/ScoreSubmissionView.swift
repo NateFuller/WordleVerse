@@ -137,7 +137,7 @@ struct ScoreSubmissionView: View {
         .padding(16)
       }
     }
-    .navigationTitle("today's \(game.title)")
+    .navigationTitle("Submit 📋")
     .onAppear() {
       AnalyticsManager.logger.logScreen(.scoreSubmission)
     }

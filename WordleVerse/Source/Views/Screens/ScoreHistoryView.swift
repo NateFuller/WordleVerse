@@ -45,11 +45,13 @@ struct ScoreHistoryView: View {
         }
       )
     }
-    .navigationTitle("Score history")
+    .navigationTitle("History")
     .toolbar(content: {
       ToolbarItem(placement: .navigationBarTrailing) {
-        Button("Submit new score") {
+        Button {
           presentingScoreSubmission.wrappedValue = true
+        } label: {
+          Image(systemName: "plus")
         }
       }
     })
