@@ -16,10 +16,9 @@ struct FlexibleButton: ButtonStyle {
       .font(.system(size: 17).weight(.semibold))
       .foregroundColor(Colors.Text.primary)
       .homeScreenRow()
+      .background(configuration.isPressed ? Color(white: 0, opacity: 0.2) : Color.clear)
       .background(Colors.Background.Gradient.bottomToTop)
       .background(color)
       .cornerRadius(8)
-      .scaleEffect(configuration.isPressed ? 0.98 : 1)
-      .animation(.easeInOut, value: configuration.isPressed)
   }
 }

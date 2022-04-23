@@ -49,15 +49,15 @@ struct HomeScreenView: View {
         .navigationTitle("WordleVerse")
         .padding(16)
       }
+      .onAppear() {
+        AnalyticsManager.logger.logScreen(.home)
+      }
     }
     .accentColor(Colors.Text.link)
     .navigationViewStyle(.stack)
     .environment(\.didSubmitScore, $historyIsRoot)
     .environment(\.presentHistory, $presentingHistory)
     .environment(\.rootPresentationMode, $presentingScoreSubmission)
-    .onAppear() {
-      AnalyticsManager.logger.logScreen(.home)
-    }
   }
 }
 
