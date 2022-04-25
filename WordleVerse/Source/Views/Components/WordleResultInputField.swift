@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WordleResultInputField: View {
   @Binding var userInput: String
+  @FocusState private var isFocused: Bool
 
   init(userInput: Binding<String>) {
     self._userInput = userInput
@@ -30,6 +31,15 @@ struct WordleResultInputField: View {
       TextEditor(text: $userInput)
         .padding(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 0))
         .opacity(userInput.isEmpty ? 0.7 : 1)
+        .focused($isFocused)
+        .toolbar {
+          ToolbarItemGroup(placement: .keyboard) {
+            Spacer()
+            Button("Done") {
+              isFocused = false
+            }
+          }
+        }
     }
     .background(Colors.Background.primary)
     .cornerRadius(15)

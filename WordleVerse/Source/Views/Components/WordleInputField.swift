@@ -49,6 +49,14 @@ struct WordleInputField: View {
       .multilineTextAlignment(.center)
       .focused($isFocused)
       .submitLabel(.done)
+      .toolbar {
+        ToolbarItemGroup(placement: .keyboard) {
+          Spacer()
+          Button("Done") {
+            isFocused = false
+          }
+        }
+      }
   }
 
   private var squares: some View {
