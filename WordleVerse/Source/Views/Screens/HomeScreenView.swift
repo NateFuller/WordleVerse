@@ -46,7 +46,7 @@ struct HomeScreenView: View {
           }
           Spacer()
         }
-        .navigationTitle("WordleVerse")
+        .navigationTitle(Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String)
         .padding(16)
       }
       .onAppear() {

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBCCA39D27C94855007B2643"
-               BuildableName = "WordleVerse.app"
-               BlueprintName = "WordleVerse"
-               ReferencedContainer = "container:WordleVerse.xcodeproj">
+               BuildableName = "Recordle.app"
+               BlueprintName = "Recordle"
+               ReferencedContainer = "container:Recordle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBCCA3AD27C94857007B2643"
-               BuildableName = "WordleVerseTests.xctest"
-               BlueprintName = "WordleVerseTests"
-               ReferencedContainer = "container:WordleVerse.xcodeproj">
+               BuildableName = "RecordleTests.xctest"
+               BlueprintName = "RecordleTests"
+               ReferencedContainer = "container:Recordle.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBCCA3B727C94857007B2643"
-               BuildableName = "WordleVerseUITests.xctest"
-               BlueprintName = "WordleVerseUITests"
-               ReferencedContainer = "container:WordleVerse.xcodeproj">
+               BuildableName = "RecordleUITests.xctest"
+               BlueprintName = "RecordleUITests"
+               ReferencedContainer = "container:Recordle.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBCCA39D27C94855007B2643"
-            BuildableName = "WordleVerse.app"
-            BlueprintName = "WordleVerse"
-            ReferencedContainer = "container:WordleVerse.xcodeproj">
+            BuildableName = "Recordle.app"
+            BlueprintName = "Recordle"
+            ReferencedContainer = "container:Recordle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBCCA39D27C94855007B2643"
-            BuildableName = "WordleVerse.app"
-            BlueprintName = "WordleVerse"
-            ReferencedContainer = "container:WordleVerse.xcodeproj">
+            BuildableName = "Recordle.app"
+            BlueprintName = "Recordle"
+            ReferencedContainer = "container:Recordle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:WordleVerse.xcodeproj">
+      location = "group:/Users/nathanfuller/Developer/ios/WordleVerse/Recordle.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
