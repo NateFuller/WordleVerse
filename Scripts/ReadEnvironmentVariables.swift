@@ -1,7 +1,7 @@
 #!/usr/bin/env xcrun swift
 //
 //  ReadEnvironmentVariables.swift
-//  WordleVerse
+//  Recordle
 //
 //  Created by Nathan Fuller on 4/12/22.
 //  A rough copy-pasta of Josh Kaplan's
@@ -123,7 +123,7 @@ do {
   let adMobAppIDKey = "GADApplicationIdentifier"
   let plistUpdates = [adMobAppIDKey: adMobAppID]
 
-  try updatePropertyListWithEntries(plistUpdates, atPath: URL(fileURLWithPath: "./WordleVerse/Info.plist"))
+  try updatePropertyListWithEntries(plistUpdates, atPath: URL(fileURLWithPath: "./Recordle/Info.plist"))
   print("✅ Done")
 } catch let ScriptError.general(message) {
   print("❌ error: \(message)")

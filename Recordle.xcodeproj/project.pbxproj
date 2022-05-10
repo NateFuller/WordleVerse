@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F8168C6EE506B505028DFFF /* Pods_WordleVerse_WordleVerseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CB80075D1A7AA10333509F /* Pods_WordleVerse_WordleVerseUITests.framework */; };
-		AEE75760D7CF9EDB3AE09B44 /* Pods_WordleVerseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC952F48BC687F0C1B5F72A5 /* Pods_WordleVerseTests.framework */; };
-		BEDAB4254631D5FDE3397BFD /* Pods_WordleVerse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E547D1CB6E3DF7F1B10B8C /* Pods_WordleVerse.framework */; };
+		4F59A72DD62EAE2F66CD99A1 /* Pods_Recordle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848453F4D6136DF08F6C9578 /* Pods_Recordle.framework */; };
+		ADAD3712FB281B76464D3A44 /* Pods_RecordleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937B28F55F7BAE76EC295BC3 /* Pods_RecordleTests.framework */; };
 		CB073BD927CBE1750016F04F /* GameRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB073BD827CBE1750016F04F /* GameRowViewModel.swift */; };
 		CB0F311227F9DD1D00A66B00 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0F311127F9DD1D00A66B00 /* TestData.swift */; };
 		CB0F311427F9DD4200A66B00 /* TestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0F311327F9DD4200A66B00 /* TestScores.swift */; };
@@ -23,6 +22,8 @@
 		CB4A51CE27DAE6BE00AB5F0D /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4A51CD27DAE6BE00AB5F0D /* String+Subscript.swift */; };
 		CB58F48F27D589F100914CE5 /* GameSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58F48E27D589F100914CE5 /* GameSelectionView.swift */; };
 		CB58F49327D5C51B00914CE5 /* ScoreSubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB58F49227D5C51B00914CE5 /* ScoreSubmissionView.swift */; };
+		CB59FB572830ABE100887898 /* RecordleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30E8A0282AFCA0007F9892 /* RecordleUITestsLaunchTests.swift */; };
+		CB59FB582830ABEA00887898 /* RecordleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30E89F282AFCA0007F9892 /* RecordleUITests.swift */; };
 		CB69FB7427C987C10080E6D0 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7327C987C10080E6D0 /* GameRow.swift */; };
 		CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB69FB7927C9910A0080E6D0 /* Game.swift */; };
 		CB74180927D5D30700FC7CDD /* WordleInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74180827D5D30700FC7CDD /* WordleInputField.swift */; };
@@ -47,18 +48,17 @@
 		CBAF7BA72805317C00F67996 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CBAF7BA62805317C00F67996 /* Podfile */; };
 		CBB52B7427FBE24A00B0180A /* ScoreHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB52B7327FBE24A00B0180A /* ScoreHistoryViewModel.swift */; };
 		CBB52B76280206E900B0180A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB52B75280206E900B0180A /* WebView.swift */; };
-		CBCCA3A227C94855007B2643 /* WordleVerseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3A127C94855007B2643 /* WordleVerseApp.swift */; };
+		CBCCA3A227C94855007B2643 /* RecordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3A127C94855007B2643 /* RecordleApp.swift */; };
 		CBCCA3A427C94855007B2643 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3A327C94855007B2643 /* HomeScreenView.swift */; };
 		CBCCA3A627C94856007B2643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCCA3A527C94856007B2643 /* Assets.xcassets */; };
 		CBCCA3A927C94856007B2643 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCCA3A827C94856007B2643 /* Preview Assets.xcassets */; };
-		CBCCA3B327C94857007B2643 /* WordleAggregatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3B227C94857007B2643 /* WordleAggregatorTests.swift */; };
-		CBCCA3BD27C94857007B2643 /* WordleAggregatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3BC27C94857007B2643 /* WordleAggregatorUITests.swift */; };
-		CBCCA3BF27C94857007B2643 /* WordleAggregatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3BE27C94857007B2643 /* WordleAggregatorUITestsLaunchTests.swift */; };
+		CBCCA3B327C94857007B2643 /* RecordleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCCA3B227C94857007B2643 /* RecordleTests.swift */; };
 		CBD2FE5F27D2B59200631C26 /* Color+Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD2FE5E27D2B59200631C26 /* Color+Saved.swift */; };
 		CBED677527F6B82100D106C0 /* PasteResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED677427F6B82100D106C0 /* PasteResultsView.swift */; };
 		CBED677727F6C0DE00D106C0 /* String+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED677627F6C0DE00D106C0 /* String+Optional.swift */; };
 		CBEDBA4B27D332450007C16D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEDBA4A27D332450007C16D /* Colors.xcassets */; };
 		CBEDBA5227D343430007C16D /* FlexibleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDBA5127D343430007C16D /* FlexibleButton.swift */; };
+		E939277A2E06FEEF4B251977 /* Pods_Recordle_RecordleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86F139E98A2425F806932FB /* Pods_Recordle_RecordleUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,17 +80,26 @@
 
 /* Begin PBXFileReference section */
 		07F12599D1B09D76D250C5E4 /* Pods-WordleVerse-WordleVerseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse-WordleVerseUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		42CB80075D1A7AA10333509F /* Pods_WordleVerse_WordleVerseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleVerse_WordleVerseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EEFBD55440ECEA28F8D84 /* Pods-Recordle-RecordleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recordle-RecordleUITests.release.xcconfig"; path = "Target Support Files/Pods-Recordle-RecordleUITests/Pods-Recordle-RecordleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2AF0A4AB760B1E51E5E6719D /* Pods-Recordle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recordle.release.xcconfig"; path = "Target Support Files/Pods-Recordle/Pods-Recordle.release.xcconfig"; sourceTree = "<group>"; };
+		4320B8841F5873343FC34101 /* Pods-Recordle-RecordleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recordle-RecordleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Recordle-RecordleUITests/Pods-Recordle-RecordleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		50A110AD8164D993961403A8 /* Pods-Recordle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recordle.debug.xcconfig"; path = "Target Support Files/Pods-Recordle/Pods-Recordle.debug.xcconfig"; sourceTree = "<group>"; };
 		61BE1B8A65B412361138B1D6 /* Pods-WordleVerseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerseTests.debug.xcconfig"; path = "Target Support Files/Pods-WordleVerseTests/Pods-WordleVerseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		848453F4D6136DF08F6C9578 /* Pods_Recordle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recordle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8562B73341A010D641ABF33A /* Pods-WordleVerse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse.release.xcconfig"; path = "Target Support Files/Pods-WordleVerse/Pods-WordleVerse.release.xcconfig"; sourceTree = "<group>"; };
 		934B4EF760566C480CCD9B3C /* Pods-WordleVerse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse.debug.xcconfig"; path = "Target Support Files/Pods-WordleVerse/Pods-WordleVerse.debug.xcconfig"; sourceTree = "<group>"; };
-		BC952F48BC687F0C1B5F72A5 /* Pods_WordleVerseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleVerseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		937B28F55F7BAE76EC295BC3 /* Pods_RecordleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecordleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D1192EEB87B3D61F038082 /* Pods-RecordleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordleTests.debug.xcconfig"; path = "Target Support Files/Pods-RecordleTests/Pods-RecordleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B39FDC01DB7A9996F6D098E5 /* Pods-RecordleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordleTests.release.xcconfig"; path = "Target Support Files/Pods-RecordleTests/Pods-RecordleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C55A91B6A5268D92DC3AF1FA /* Pods-WordleVerseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerseTests.release.xcconfig"; path = "Target Support Files/Pods-WordleVerseTests/Pods-WordleVerseTests.release.xcconfig"; sourceTree = "<group>"; };
+		C86F139E98A2425F806932FB /* Pods_Recordle_RecordleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recordle_RecordleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB073BD827CBE1750016F04F /* GameRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRowViewModel.swift; sourceTree = "<group>"; };
 		CB0F311127F9DD1D00A66B00 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		CB0F311327F9DD4200A66B00 /* TestScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScores.swift; sourceTree = "<group>"; };
 		CB18720527E1820000BC81C4 /* TextFieldLimitModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLimitModifier.swift; sourceTree = "<group>"; };
 		CB18720827E199E600BC81C4 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		CB30E89F282AFCA0007F9892 /* RecordleUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordleUITests.swift; sourceTree = "<group>"; };
+		CB30E8A0282AFCA0007F9892 /* RecordleUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB349226282AF83A008E6B11 /* Recordle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recordle.xcdatamodel; sourceTree = "<group>"; };
 		CB360BBA280320EA00F430DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB4A3B3E27E97C5400DB32A4 /* WordleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleParser.swift; sourceTree = "<group>"; };
@@ -124,22 +133,19 @@
 		CBB52B7327FBE24A00B0180A /* ScoreHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryViewModel.swift; sourceTree = "<group>"; };
 		CBB52B75280206E900B0180A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		CBCCA39E27C94855007B2643 /* Recordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBCCA3A127C94855007B2643 /* WordleVerseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleVerseApp.swift; sourceTree = "<group>"; };
+		CBCCA3A127C94855007B2643 /* RecordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordleApp.swift; sourceTree = "<group>"; };
 		CBCCA3A327C94855007B2643 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		CBCCA3A527C94856007B2643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBCCA3A827C94856007B2643 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBCCA3AE27C94857007B2643 /* RecordleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBCCA3B227C94857007B2643 /* WordleAggregatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleAggregatorTests.swift; sourceTree = "<group>"; };
+		CBCCA3B227C94857007B2643 /* RecordleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordleTests.swift; sourceTree = "<group>"; };
 		CBCCA3B827C94857007B2643 /* RecordleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBCCA3BC27C94857007B2643 /* WordleAggregatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleAggregatorUITests.swift; sourceTree = "<group>"; };
-		CBCCA3BE27C94857007B2643 /* WordleAggregatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleAggregatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBD2FE5E27D2B59200631C26 /* Color+Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Saved.swift"; sourceTree = "<group>"; };
 		CBED677427F6B82100D106C0 /* PasteResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteResultsView.swift; sourceTree = "<group>"; };
 		CBED677627F6C0DE00D106C0 /* String+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Optional.swift"; sourceTree = "<group>"; };
 		CBEDBA4A27D332450007C16D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CBEDBA5127D343430007C16D /* FlexibleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleButton.swift; sourceTree = "<group>"; };
 		CBEDBA5327D356240007C16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E0E547D1CB6E3DF7F1B10B8C /* Pods_WordleVerse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleVerse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA2F329079E89F1F852B655 /* Pods-WordleVerse-WordleVerseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleVerse-WordleVerseUITests.release.xcconfig"; path = "Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDAB4254631D5FDE3397BFD /* Pods_WordleVerse.framework in Frameworks */,
+				4F59A72DD62EAE2F66CD99A1 /* Pods_Recordle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE75760D7CF9EDB3AE09B44 /* Pods_WordleVerseTests.framework in Frameworks */,
+				ADAD3712FB281B76464D3A44 /* Pods_RecordleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F8168C6EE506B505028DFFF /* Pods_WordleVerse_WordleVerseUITests.framework in Frameworks */,
+				E939277A2E06FEEF4B251977 /* Pods_Recordle_RecordleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +186,12 @@
 				FBA2F329079E89F1F852B655 /* Pods-WordleVerse-WordleVerseUITests.release.xcconfig */,
 				61BE1B8A65B412361138B1D6 /* Pods-WordleVerseTests.debug.xcconfig */,
 				C55A91B6A5268D92DC3AF1FA /* Pods-WordleVerseTests.release.xcconfig */,
+				50A110AD8164D993961403A8 /* Pods-Recordle.debug.xcconfig */,
+				2AF0A4AB760B1E51E5E6719D /* Pods-Recordle.release.xcconfig */,
+				4320B8841F5873343FC34101 /* Pods-Recordle-RecordleUITests.debug.xcconfig */,
+				276EEFBD55440ECEA28F8D84 /* Pods-Recordle-RecordleUITests.release.xcconfig */,
+				97D1192EEB87B3D61F038082 /* Pods-RecordleTests.debug.xcconfig */,
+				B39FDC01DB7A9996F6D098E5 /* Pods-RecordleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -187,9 +199,9 @@
 		4C61A8B3B5D21C14BF641751 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0E547D1CB6E3DF7F1B10B8C /* Pods_WordleVerse.framework */,
-				42CB80075D1A7AA10333509F /* Pods_WordleVerse_WordleVerseUITests.framework */,
-				BC952F48BC687F0C1B5F72A5 /* Pods_WordleVerseTests.framework */,
+				848453F4D6136DF08F6C9578 /* Pods_Recordle.framework */,
+				C86F139E98A2425F806932FB /* Pods_Recordle_RecordleUITests.framework */,
+				937B28F55F7BAE76EC295BC3 /* Pods_RecordleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +233,15 @@
 				CBEDBA4A27D332450007C16D /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB30E89E282AFCA0007F9892 /* RecordleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB30E89F282AFCA0007F9892 /* RecordleUITests.swift */,
+				CB30E8A0282AFCA0007F9892 /* RecordleUITestsLaunchTests.swift */,
+			);
+			path = RecordleUITests;
 			sourceTree = "<group>";
 		};
 		CB4A3B3D27E97C4200DB32A4 /* Utility */ = {
@@ -274,7 +295,7 @@
 		CB69FB7127C94A120080E6D0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CBCCA3A127C94855007B2643 /* WordleVerseApp.swift */,
+				CBCCA3A127C94855007B2643 /* RecordleApp.swift */,
 				CB7CA0E628032FBC009CCF5C /* Analytics */,
 				CBAE44EC27D53F5900F60C04 /* Data */,
 				CB7733B227F8C0A900DB9D9F /* Error */,
@@ -371,10 +392,10 @@
 		CBCCA39527C94855007B2643 = {
 			isa = PBXGroup;
 			children = (
-				CBCCA3A027C94855007B2643 /* WordleVerse */,
-				CBCCA3B127C94857007B2643 /* WordleVerseTests */,
-				CBCCA3BB27C94857007B2643 /* WordleVerseUITests */,
 				CBAF7BA62805317C00F67996 /* Podfile */,
+				CBCCA3A027C94855007B2643 /* Recordle */,
+				CBCCA3B127C94857007B2643 /* RecordleTests */,
+				CB30E89E282AFCA0007F9892 /* RecordleUITests */,
 				CBCCA39F27C94855007B2643 /* Products */,
 				0BDE3B7928D5B4126AF1D715 /* Pods */,
 				4C61A8B3B5D21C14BF641751 /* Frameworks */,
@@ -391,7 +412,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CBCCA3A027C94855007B2643 /* WordleVerse */ = {
+		CBCCA3A027C94855007B2643 /* Recordle */ = {
 			isa = PBXGroup;
 			children = (
 				CB360BBA280320EA00F430DD /* GoogleService-Info.plist */,
@@ -401,7 +422,7 @@
 				CB18720727E1905800BC81C4 /* Resources */,
 				CBCCA3A727C94856007B2643 /* Preview Content */,
 			);
-			path = WordleVerse;
+			path = Recordle;
 			sourceTree = "<group>";
 		};
 		CBCCA3A727C94856007B2643 /* Preview Content */ = {
@@ -412,23 +433,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CBCCA3B127C94857007B2643 /* WordleVerseTests */ = {
+		CBCCA3B127C94857007B2643 /* RecordleTests */ = {
 			isa = PBXGroup;
 			children = (
 				CB4A3B4227E9805C00DB32A4 /* Test Data */,
-				CBCCA3B227C94857007B2643 /* WordleAggregatorTests.swift */,
+				CBCCA3B227C94857007B2643 /* RecordleTests.swift */,
 				CB4A3B4027E97D2600DB32A4 /* WordleParserTests.swift */,
 			);
-			path = WordleVerseTests;
-			sourceTree = "<group>";
-		};
-		CBCCA3BB27C94857007B2643 /* WordleVerseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CBCCA3BC27C94857007B2643 /* WordleAggregatorUITests.swift */,
-				CBCCA3BE27C94857007B2643 /* WordleAggregatorUITestsLaunchTests.swift */,
-			);
-			path = WordleVerseUITests;
+			path = RecordleTests;
 			sourceTree = "<group>";
 		};
 		CBEDBA4F27D343300007C16D /* Buttons */ = {
@@ -589,15 +601,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse/Pods-WordleVerse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Recordle/Pods-Recordle-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse/Pods-WordleVerse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Recordle/Pods-Recordle-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordleVerse/Pods-WordleVerse-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recordle/Pods-Recordle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ACD4AF79A47B446F6CB87D2D /* [CP] Check Pods Manifest.lock */ = {
@@ -615,7 +627,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WordleVerse-WordleVerseUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Recordle-RecordleUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -628,15 +640,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Recordle-RecordleUITests/Pods-Recordle-RecordleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Recordle-RecordleUITests/Pods-Recordle-RecordleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordleVerse-WordleVerseUITests/Pods-WordleVerse-WordleVerseUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Recordle-RecordleUITests/Pods-Recordle-RecordleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BCC1A6936BBCEE1BA4038607 /* [CP] Check Pods Manifest.lock */ = {
@@ -654,7 +666,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WordleVerse-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Recordle-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -694,7 +706,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WordleVerseTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RecordleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -736,7 +748,7 @@
 				CB69FB7A27C9910A0080E6D0 /* Game.swift in Sources */,
 				CB7733B927F900BB00DB9D9F /* HomeScreenRow.swift in Sources */,
 				CB7733B427F8C0C000DB9D9F /* TestError.swift in Sources */,
-				CBCCA3A227C94855007B2643 /* WordleVerseApp.swift in Sources */,
+				CBCCA3A227C94855007B2643 /* RecordleApp.swift in Sources */,
 				CB58F49327D5C51B00914CE5 /* ScoreSubmissionView.swift in Sources */,
 				CB78262427F6C39600D114D8 /* InnerShadowModifier.swift in Sources */,
 				CB7733B727F8F3B800DB9D9F /* EnvironmentValues+Routing.swift in Sources */,
@@ -754,7 +766,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBCCA3B327C94857007B2643 /* WordleAggregatorTests.swift in Sources */,
+				CBCCA3B327C94857007B2643 /* RecordleTests.swift in Sources */,
 				CB4A3B4127E97D2600DB32A4 /* WordleParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,8 +775,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBCCA3BF27C94857007B2643 /* WordleAggregatorUITestsLaunchTests.swift in Sources */,
-				CBCCA3BD27C94857007B2643 /* WordleAggregatorUITests.swift in Sources */,
+				CB59FB572830ABE100887898 /* RecordleUITestsLaunchTests.swift in Sources */,
+				CB59FB582830ABEA00887898 /* RecordleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,18 +916,18 @@
 		};
 		CBCCA3C327C94857007B2643 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 934B4EF760566C480CCD9B3C /* Pods-WordleVerse.debug.xcconfig */;
+			baseConfigurationReference = 50A110AD8164D993961403A8 /* Pods-Recordle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_ASSET_PATHS = "\"WordleVerse/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Recordle/Preview Content\"";
 				DEVELOPMENT_TEAM = FB4GZPFLL6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WordleVerse/Info.plist;
+				INFOPLIST_FILE = Recordle/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Recordle;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -936,17 +948,17 @@
 		};
 		CBCCA3C427C94857007B2643 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8562B73341A010D641ABF33A /* Pods-WordleVerse.release.xcconfig */;
+			baseConfigurationReference = 2AF0A4AB760B1E51E5E6719D /* Pods-Recordle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"WordleVerse/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Recordle/Preview Content\"";
 				DEVELOPMENT_TEAM = FB4GZPFLL6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WordleVerse/Info.plist;
+				INFOPLIST_FILE = Recordle/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Recordle;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -967,7 +979,7 @@
 		};
 		CBCCA3C627C94857007B2643 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61BE1B8A65B412361138B1D6 /* Pods-WordleVerseTests.debug.xcconfig */;
+			baseConfigurationReference = 97D1192EEB87B3D61F038082 /* Pods-RecordleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -993,7 +1005,7 @@
 		};
 		CBCCA3C727C94857007B2643 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C55A91B6A5268D92DC3AF1FA /* Pods-WordleVerseTests.release.xcconfig */;
+			baseConfigurationReference = B39FDC01DB7A9996F6D098E5 /* Pods-RecordleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1019,7 +1031,7 @@
 		};
 		CBCCA3C927C94857007B2643 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07F12599D1B09D76D250C5E4 /* Pods-WordleVerse-WordleVerseUITests.debug.xcconfig */;
+			baseConfigurationReference = 4320B8841F5873343FC34101 /* Pods-Recordle-RecordleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1034,16 +1046,17 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanernestfuller.WordleVerseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WordleVerse;
+				TEST_TARGET_NAME = Recordle;
 			};
 			name = Debug;
 		};
 		CBCCA3CA27C94857007B2643 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBA2F329079E89F1F852B655 /* Pods-WordleVerse-WordleVerseUITests.release.xcconfig */;
+			baseConfigurationReference = 276EEFBD55440ECEA28F8D84 /* Pods-Recordle-RecordleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1058,10 +1071,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanernestfuller.WordleVerseUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WordleVerse;
+				TEST_TARGET_NAME = Recordle;
 			};
 			name = Release;
 		};
