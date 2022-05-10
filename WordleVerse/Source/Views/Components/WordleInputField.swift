@@ -18,6 +18,7 @@ struct WordleInputField: View {
 
   @FocusState private var isFocused: Bool
 
+  private var squareSpacing: CGFloat? { UIDevice.current.userInterfaceIdiom == .pad ? 20 : 8 }
   private var indexOfFocusedCharacter: Int { max(min(inputText.length, length - 1), 0) }
 
   init(length: Int, inputText: Binding<String>) {
@@ -60,7 +61,7 @@ struct WordleInputField: View {
   }
 
   private var squares: some View {
-    HStack() {
+    HStack(spacing: squareSpacing) {
       ForEach(0..<length, id:\.self) { index in
         ZStack {
           Rectangle()
@@ -74,6 +75,7 @@ struct WordleInputField: View {
             .padding(80 / CGFloat(length))
         }
         .aspectRatio(1, contentMode: .fit)
+        .frame(idealWidth: 120, maxWidth: 120)
         .scaleEffect(isFocused && index == indexOfFocusedCharacter ? 1.05 : 1)
       }
     }
@@ -84,6 +86,5 @@ struct WordleInputField_Previews: PreviewProvider {
   static var previews: some View {
     WordleInputField(length: 5, inputText: .constant("weir"))
       .preferredColorScheme(.light)
-      .previewLayout(.sizeThatFits)
   }
 }
