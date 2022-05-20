@@ -152,7 +152,7 @@ struct ScoreSubmissionView: View {
   private func saveScore() {
     let score = Score(context: CoreDataStack.context)
     score.answer = isInputFilled ? answerInput.lowercased() : nil
-    score.date = Date(timeInterval: -60*60*24, since: Date())
+    score.date = Date()
     score.guessSummary = parseResult.guessSummary
     score.isHardMode = parseResult.isHardMode
     score.maxGuesses = Int64(maxGuesses)
